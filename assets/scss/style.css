@@ -1,6 +1,6 @@
 body {
-  font-family: "Roboto-Bold", sans-serif;
-  font-weight: 700;
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
 }
 
 @font-face {
@@ -86,8 +86,33 @@ a[class] {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 body {
-  width: 300px;
-  height: 300px;
-  color: #ABABAB;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.big__title {
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.default__title {
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.small__title {
+  font-size: 36px;
+  line-height: 130%;
+}
+
+.subtitle {
+  font-size: 24px;
+  line-height: 120%;
 }/*# sourceMappingURL=style.css.map */
