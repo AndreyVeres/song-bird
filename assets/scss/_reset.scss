@@ -21,7 +21,7 @@ h4,
 h5,
 h6,
 p,
-/* ul[class], */
+ul[class],
 ol[class],
 li,
 figure,
@@ -39,7 +39,7 @@ ul[class] {
 
 img {
     max-width: 100%;
-    /* display: block; */
+    display: block;
 }
 
 input,
@@ -47,11 +47,9 @@ button,
 textarea,
 select {
     font: inherit;
-    border: 0;
 }
 
 a[class] {
     text-decoration: none;
-    color: inherit;
 
 }
