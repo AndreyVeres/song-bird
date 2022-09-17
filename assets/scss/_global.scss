@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 0 10px;
 }
+
 body {
     @extend %Roboto-400;
     font-size: 16px;
@@ -22,18 +23,38 @@ body {
     @extend %Roboto-500;
 }
 
+
+.arrow {
+    position: absolute;
+    z-index: 5;
+    top: calc(50% - 40px);
+}
+
+.arrow__left {
+    left: -75px;
+}
+
+.arrow__right {
+    right: -75px;
+}
+
+
+
 .big__title {
     font-size: 48px;
     line-height: 120%;
 }
+
 .h2__title {
     font-size: 48px;
     line-height: 120%;
 }
+
 .h3__title {
     font-size: 36px;
     line-height: 130%;
 }
+
 .subtitle {
     font-size: 24px;
     line-height: 120%;

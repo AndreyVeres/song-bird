@@ -3,7 +3,13 @@
   font-weight: 700;
 }
 
-.logo, body {
+.pets__gallery-item__subtitle {
+  font-family: "Roboto-Light", sans-serif;
+  font-weight: 300;
+}
+
+.theBackstage__title, .logo__title,
+.logo .logo__subtitle, body {
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
 }
@@ -64,8 +70,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -74,7 +80,6 @@ dl,
 dd {
   margin: 0;
   padding: 0;
-  font-weight: inherit;
 }
 
 ul[class] {
@@ -118,6 +123,20 @@ body {
   display: block;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 5;
+  top: calc(50% - 40px);
+}
+
+.arrow__left {
+  left: -75px;
+}
+
+.arrow__right {
+  right: -75px;
 }
 
 .big__title {
@@ -170,7 +189,7 @@ body {
 }
 
 .logo {
-  padding: 4px 5px;
+  padding: 3px 4px;
   text-align: center;
   border: 1.18841px solid #FFFFFF;
   position: relative;
@@ -246,4 +265,58 @@ body {
 }
 .theBackstage__path {
   margin-bottom: 54px;
+}
+
+.pets {
+  margin-top: 120px;
+}
+.pets__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 70px;
+  position: relative;
+}
+.pets__gallery-item__title {
+  text-transform: uppercase;
+}
+.pets__gallery-item {
+  border-radius: 7px;
+  position: relative;
+}
+.pets__gallery-item__img {
+  border-radius: 5px 5px 0 0;
+}
+.pets__btn {
+  margin: 0 auto;
+}
+.pets__gallery-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: #FEBDAB;
+  border-radius: 5px;
+  z-index: -1;
+}
+.pets__galerry-item__info {
+  padding: 8px 58px 8px 10px;
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+}
+.pets__galerry-item__info::before {
+  right: 11px;
+  top: 10px;
+}
+.pets__galerry-item__info[data-food=vegan]::before {
+  content: url(../images/vegan.svg);
+  position: absolute;
+}
+.pets__galerry-item__info[data-food=meat]::before {
+  content: url(../images/meat.svg);
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
