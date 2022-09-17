@@ -23,11 +23,24 @@ body {
     @extend %Roboto-500;
 }
 
+.ovalBtn:hover {
+    background: linear-gradient(113.96deg, #d86f42 1.49%, #da7c11 101.44%);
+}
+
 
 .arrow {
     position: absolute;
     z-index: 5;
     top: calc(50% - 40px);
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    
+}
+
+.arrow:hover svg defs linearGradient stop{
+    stop-color: $green;
+
 }
 
 .arrow__left {

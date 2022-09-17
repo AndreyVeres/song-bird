@@ -125,10 +125,21 @@ body {
   text-transform: uppercase;
 }
 
+.ovalBtn:hover {
+  background: linear-gradient(113.96deg, #d86f42 1.49%, #da7c11 101.44%);
+}
+
 .arrow {
   position: absolute;
   z-index: 5;
   top: calc(50% - 40px);
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+.arrow:hover svg defs linearGradient stop {
+  stop-color: #4B9200;
 }
 
 .arrow__left {
@@ -186,6 +197,11 @@ body {
 }
 .header__link {
   color: #ffffff;
+}
+.header__link-active {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .logo {
@@ -248,6 +264,7 @@ body {
 
 .theBackstage {
   margin-top: 140px;
+  position: relative;
 }
 .theBackstage__box {
   display: flex;
@@ -266,9 +283,15 @@ body {
 .theBackstage__path {
   margin-bottom: 54px;
 }
+.theBackstage-decor {
+  position: absolute;
+  right: 0;
+  top: -100px;
+}
 
 .pets {
   margin-top: 120px;
+  position: relative;
 }
 .pets__gallery {
   display: grid;
@@ -283,30 +306,49 @@ body {
 .pets__gallery-item {
   border-radius: 7px;
   position: relative;
+  cursor: pointer;
+}
+.pets__gallery-img__box {
+  overflow: hidden;
+}
+.pets__gallery-item:hover .pets__gallery-item__img {
+  border-radius: 5px 5px 0px 0px;
+  transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+}
+.pets__gallery-item:hover .pets__galerry-item__info {
+  transform: translate(0);
+}
+.pets__gallery-item:hover.pets__gallery-item::before {
+  bottom: -2px;
 }
 .pets__gallery-item__img {
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 5px 5px;
+  transition: transform 0.8s;
+  position: relative;
 }
 .pets__btn {
-  margin: 0 auto;
+  margin: 0 auto 100px;
 }
 .pets__gallery-item::before {
   content: "";
   position: absolute;
-  top: -2px;
-  bottom: -2px;
+  top: -3px;
+  bottom: 58px;
   left: -2px;
   right: -2px;
   background: #FEBDAB;
   border-radius: 5px;
-  z-index: -1;
+  z-index: -10;
+  transition: all 1s;
 }
 .pets__galerry-item__info {
   padding: 8px 58px 8px 10px;
   position: relative;
-  z-index: 1;
+  z-index: -5;
   background-color: #ffffff;
   border-radius: 0 0 5px 5px;
+  transition: all 1s;
+  transform: translate(0, -60px);
 }
 .pets__galerry-item__info::before {
   right: 11px;
@@ -319,4 +361,15 @@ body {
 .pets__galerry-item__info[data-food=meat]::before {
   content: url(../images/meat.svg);
   position: absolute;
+}
+.pets-decor {
+  position: absolute;
+}
+.pets-decor-1 {
+  left: 0;
+  bottom: -97px;
+}
+.pets-decor-2 {
+  right: 0;
+  bottom: -97px;
 }/*# sourceMappingURL=style.css.map */
