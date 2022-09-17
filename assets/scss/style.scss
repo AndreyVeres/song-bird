@@ -3,6 +3,138 @@
 @import "reset";
 @import "global";
 
+.header {
+    position: absolute;
+    background-color: $black;
+    width: 100%;
+    color: $white;
 
+    &__logo {
+        margin-right: 67px;
+        color: $white;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        @extend %Roboto-500;
+
+    }
+
+    &__item {
+        padding: 29px 0;
+    }
+
+    &__item+.header__item {
+        margin-left: 58px;
+    }
+
+    &__link {
+        color: $white;
+    }
+}
+
+.logo {
+    padding: 4px 5px;
+    text-align: center;
+    border: 1.18841px solid #FFFFFF;
+    position: relative;
+    @extend %Roboto-400;
+
+    &__title,
+    .logo__subtitle {
+
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    &::before {
+        position: absolute;
+        content: url(../images/logoImage.svg);
+        left: 14px;
+        bottom: 4px;
+    }
+}
+
+.watchOnline {
+    background-image: url(../images/header-bg.jpg);
+    min-height: 780px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    &__span {
+        color: $yellow;
+    }
+
+    &__box {
+        padding-left: 57%;
+        padding-top: 14%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @extend %Roboto-700;
+        color: $white;
+        max-width: 500px;
+        font-size: 106px;
+        line-height: 75%;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 60px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title::before {
+        content: "";
+        width: 465px;
+        border-radius: 50%;
+        position: absolute;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        height: 465px;
+        z-index: -1;
+        top: -70px;
+        left: -64px;
+    }
+
+}
+
+
+.theBackstage {
+    margin-top: 140px;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        margin-right: 87px;
+        max-height: 403px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__subtitle {
+        margin-bottom: 34px;
+    }
+
+    &__path {
+        margin-bottom: 54px;
+    }
+
+}
 
 @import "media";
