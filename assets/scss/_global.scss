@@ -10,6 +10,31 @@ body {
     line-height: 140%;
 }
 
+
+// .testimonials__box::-webkit-scrollbar {
+//     color: red;
+//     height: 6px;
+//     width: 10;
+// }
+
+// .testimonials__box::-webkit-scrollbar-track {
+    
+  
+// }
+
+// .testimonials__box::-webkit-scrollbar-track::before {
+//     background-color: #fff;
+ 
+// }
+
+
+// .testimonials__box::-webkit-scrollbar-thumb {
+//     background-color: red;
+//     height: 5px;
+//     border-radius: 20px;
+// }
+
+
 .ovalBtn {
     width: 298px;
     height: 54px;
@@ -23,6 +48,10 @@ body {
     @extend %Roboto-500;
 }
 
+
+.rectBtn {
+    
+}
 .ovalBtn:hover {
     background: linear-gradient(113.96deg, #d86f42 1.49%, #da7c11 101.44%);
 }
@@ -35,10 +64,10 @@ body {
     cursor: pointer;
     border: 0;
     background: transparent;
-    
+
 }
 
-.arrow:hover svg defs linearGradient stop{
+.arrow:hover svg defs linearGradient stop {
     stop-color: $green;
 
 }
