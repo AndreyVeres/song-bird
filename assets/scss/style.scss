@@ -52,7 +52,8 @@
     text-align: center;
     border: 1.18841px solid #FFFFFF;
     position: relative;
-
+    max-width: 82px;
+    color: $white;
 
     &__title,
     .logo__subtitle {
@@ -376,8 +377,8 @@
 .testimonials {
     font-size: 15px;
     line-height: 18px;
+    position: relative;
 
-    margin-bottom: 500px;
 
     &__title {
         padding: 134px 0 28px;
@@ -439,11 +440,12 @@
 
     &__box {
         white-space: nowrap;
-       
+
     }
 
     input[type=range] {
         -webkit-appearance: none;
+        -moz-appearance: none;
         width: 600px;
         height: 8px;
         position: relative;
@@ -451,6 +453,7 @@
         display: block;
         margin: 0 auto 32px;
     }
+
     input[type=range]::before {
         content: '';
         position: absolute;
@@ -463,8 +466,29 @@
         z-index: -10;
         border-radius: 5px;
     }
-    input[type=range]::-webkit-slider-thumb{
+
+    input[type=range]::-webkit-slider-thumb {
         -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 115px;
+        height: 6px;
+        background-color: #FE9013;
+        border-radius: 5px;
+    }
+
+    input[type=range]::-moz-range-track {
+        -moz-appearance: none;
+        width: 600px;
+        height: 8px;
+        position: relative;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto 32px;
+    }
+
+
+    input[type=range]::-moz-range-thumb {
+        -moz-appearance: none;
         width: 115px;
         height: 6px;
         background-color: #FE9013;
@@ -473,8 +497,137 @@
 
     &__btn {
         border-radius: 5px;
+        margin-bottom: 180px;
     }
-   
+
+    &__decor {
+        position: absolute;
+        bottom: -314px;
+        right: -16px;
+    }
+}
+
+
+.footer {
+    background-color: #111115;
+    padding: 41px 0 50px;
+    color: $white;
+
+    a {
+        color: inherit;
+    }
+
+    &__btn {
+        border-radius: 5px;
+        margin-bottom: 42px;
+    }
+
+    &__nav {
+        min-height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__logo {
+        margin-bottom: 68px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__column-form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    &__form-title {
+        margin-bottom: 14px;
+    }
+
+    &__autor {
+        align-self: flex-end;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__form-email__label {
+
+        position: relative;
+        padding: 5px;
+        background-clip: padding-box;
+        border-radius: 5px;
+        background: transparent;
+    }
+
+    &__form-email__input {
+        width: 228px;
+        height: 42px;
+        background-color: #111115;
+        z-index: 30;
+        border: 0;
+        position: relative;
+        border-radius: 2px;
+        color: $white;
+        padding: 10px 7px 10px 10px;
+    }
+
+    &__form-email__input::placeholder {
+        padding: 10px 7px 10px 10px;
+    }
+    &__form-email__label::before {
+        content: "";
+        position: absolute;
+        top: -9px;
+        right: 8px;
+        bottom: -9px;
+        left: 4px;
+        background: rgb(249,128,75);
+        background: linear-gradient(305deg, rgba(249,128,75,1) 100%, rgba(254,144,19,1) 100%);
+        z-index: 11;
+        border-radius: 2px;
+    }
+
+    &__form-btn {
+        width: 129px;
+        height: 42px;
+        border: 1px solid $green;
+        color: $green;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+}
+
+.social {
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item+.social__item {
+        margin-top: 10px;
+    }
+
+    &__img {
+        margin-right: 12px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
 }
 
 @import "media";
