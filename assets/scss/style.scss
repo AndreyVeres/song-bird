@@ -23,11 +23,14 @@
 
     &__menu {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         @extend %Roboto-500;
-
+        width: 100%;
     }
 
+    &__nav {
+        width: 100%;
+    }
     &__item {
         padding: 29px 0;
     }
@@ -44,6 +47,10 @@
         background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    &__item-last.header__item {
+        margin-left: auto;
     }
 }
 
@@ -566,7 +573,7 @@
     }
 
     &__form-email__label {
-
+     
         position: relative;
         padding: 5px;
         background-clip: padding-box;
@@ -584,12 +591,21 @@
         border-radius: 2px;
         color: $white;
         padding: 10px 7px 10px 10px;
+        border: 2px solid transparent;
+        outline: 0;
+        outline-offset: 0;
     }
+
+    .footer__form >label > input:focus .footer__form > label::before{
+        background: red;
+        color: red;
+    }
+   
 
     &__form-email__input::placeholder {
         padding: 10px 7px 10px 10px;
     }
-    &__form-email__label::before {
+    &__form-email__label-inactive::before {
         content: "";
         position: absolute;
         top: -9px;
@@ -602,6 +618,18 @@
         border-radius: 2px;
     }
 
+    &__form-email__label-focused::before{
+        content: "";
+        position: absolute;
+        top: -9px;
+        right: 7px;
+        bottom: -9px;
+        left: 3px;
+        background: green;
+        z-index: 11;
+        border-radius: 3px;
+    }
+
     &__form-btn {
         width: 129px;
         height: 42px;
@@ -611,25 +639,51 @@
         cursor: pointer;
     }
 
+    &__link-active {
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__autor:hover > p {
+        color: green;
+        transition: all .5s;
+        cursor: pointer;
+    }
 }
 
 .social {
     &__item {
         display: flex;
         flex-direction: column;
+   
     }
     &__item+.social__item {
         margin-top: 10px;
     }
 
-    &__img {
-        margin-right: 12px;
+    &__text {
+        transition: all .5s;
     }
 
+    &__item-svg {
+        margin-right: 14px;
+    }
+
+    &__item:hover .social__text{
+        color: green;
+    }
+
+    &__item:hover svg circle{
+        fill: green;
+        transition: all .5s;
+    }
     &__link {
         display: flex;
         align-items: center;
     }
+
+   
 }
+
 
 @import "media";

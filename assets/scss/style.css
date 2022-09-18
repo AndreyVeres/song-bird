@@ -187,7 +187,11 @@ body {
 }
 .header__menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  width: 100%;
+}
+.header__nav {
+  width: 100%;
 }
 .header__item {
   padding: 29px 0;
@@ -202,6 +206,9 @@ body {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.header__item-last.header__item {
+  margin-left: auto;
 }
 
 .logo {
@@ -634,6 +641,13 @@ body {
   border-radius: 2px;
   color: #ffffff;
   padding: 10px 7px 10px 10px;
+  border: 2px solid transparent;
+  outline: 0;
+  outline-offset: 0;
+}
+.footer .footer__form > label > input:focus .footer__form > label::before {
+  background: red;
+  color: red;
 }
 .footer__form-email__input::-moz-placeholder {
   padding: 10px 7px 10px 10px;
@@ -644,7 +658,7 @@ body {
 .footer__form-email__input::placeholder {
   padding: 10px 7px 10px 10px;
 }
-.footer__form-email__label::before {
+.footer__form-email__label-inactive::before {
   content: "";
   position: absolute;
   top: -9px;
@@ -656,12 +670,33 @@ body {
   z-index: 11;
   border-radius: 2px;
 }
+.footer__form-email__label-focused::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 7px;
+  bottom: -9px;
+  left: 3px;
+  background: green;
+  z-index: 11;
+  border-radius: 3px;
+}
 .footer__form-btn {
   width: 129px;
   height: 42px;
   border: 1px solid #4B9200;
   color: #4B9200;
   border-radius: 5px;
+  cursor: pointer;
+}
+.footer__link-active {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer__autor:hover > p {
+  color: green;
+  transition: all 0.5s;
   cursor: pointer;
 }
 
@@ -672,8 +707,18 @@ body {
 .social__item + .social__item {
   margin-top: 10px;
 }
-.social__img {
-  margin-right: 12px;
+.social__text {
+  transition: all 0.5s;
+}
+.social__item-svg {
+  margin-right: 14px;
+}
+.social__item:hover .social__text {
+  color: green;
+}
+.social__item:hover svg circle {
+  fill: green;
+  transition: all 0.5s;
 }
 .social__link {
   display: flex;
