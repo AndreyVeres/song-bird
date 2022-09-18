@@ -466,6 +466,11 @@ body {
 .feedFriend__step-text {
   max-width: 168px;
 }
+.feedFriend__text-link {
+  color: inherit;
+  border-bottom: 1px solid #FE9013;
+  padding-bottom: 5px;
+}
 
 .testimonials {
   font-size: 15px;
@@ -684,8 +689,16 @@ body {
 .footer__form-btn {
   width: 129px;
   height: 42px;
-  border: 1px solid #4B9200;
-  color: #4B9200;
+  border: 1px solid #D31414;
+  color: #D31414;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer__form-btn-default {
+  width: 129px;
+  height: 42px;
+  border: 1px solid #000000;
+  color: #000000;
   border-radius: 5px;
   cursor: pointer;
 }

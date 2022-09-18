@@ -377,6 +377,11 @@
     }
 
 
+    &__text-link {
+        color: inherit;
+        border-bottom: 1px solid #FE9013;
+        padding-bottom: 5px;
+    }
 
 }
 
@@ -633,8 +638,17 @@
     &__form-btn {
         width: 129px;
         height: 42px;
-        border: 1px solid $green;
-        color: $green;
+        border: 1px solid $red;
+        color: $red;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &__form-btn-default {
+        width: 129px;
+        height: 42px;
+        border: 1px solid $black;
+        color: $black;
         border-radius: 5px;
         cursor: pointer;
     }
