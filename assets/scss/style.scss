@@ -215,7 +215,7 @@
         bottom: 58px;
         left: -2px;
         right: -2px;
-        background: $pink__gradient;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
         border-radius: 5px;
         z-index: -10;
         transition: all 1s;
@@ -349,7 +349,8 @@
         bottom: 102px;
         left: 28px;
         right: 28px;
-        background: $pink__gradient;
+        background: rgb(254,210,144);
+        background: linear-gradient(135deg, rgba(254,210,144,1) 70%, rgba(254,210,144,1) 70%, rgba(254,189,171,1) 100%);
         border-radius: 5px;
         z-index: -10;
     }
@@ -452,6 +453,7 @@
         border-radius: 5px;
         display: block;
         margin: 0 auto 32px;
+        cursor: pointer;
     }
 
     input[type=range]::before {
