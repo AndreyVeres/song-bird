@@ -52,8 +52,12 @@
     &__item-last.header__item {
         margin-left: auto;
     }
-}
 
+    
+}
+.header.header__donate {
+    position: static;
+}
 .logo {
     padding: 3px 4px;
     text-align: center;
@@ -383,6 +387,12 @@
         padding-bottom: 5px;
     }
 
+}
+
+.feedFriend {
+    &__title-donate {
+        color: $white;
+    }
 }
 
 

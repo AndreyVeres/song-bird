@@ -211,6 +211,10 @@ body {
   margin-left: auto;
 }
 
+.header.header__donate {
+  position: static;
+}
+
 .logo {
   padding: 3px 4px;
   text-align: center;
@@ -470,6 +474,10 @@ body {
   color: inherit;
   border-bottom: 1px solid #FE9013;
   padding-bottom: 5px;
+}
+
+.feedFriend__title-donate {
+  color: #ffffff;
 }
 
 .testimonials {
