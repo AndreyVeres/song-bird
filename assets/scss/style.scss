@@ -3,6 +3,89 @@
 @import "reset";
 @import "global";
 
+
+.scale {
+
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        height: 27px;
+        width: 915px;
+        align-items: center;
+    }
+
+    &__container::after {
+        content: '';
+        position: absolute;
+        width: 976px;
+        height: 27px;
+        background-color: #404950;
+        z-index: -99;
+        left: calc(50% - 488px);
+    }
+
+    &__container::before {
+        content: '';
+        position: absolute;
+        width: 915px;
+        height: 3px;
+        background: #72828E;
+    }
+
+    &__circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: yellow;
+
+        position: relative;
+    }
+
+    &__circle-active::before {
+        content: "";
+        top: -8px;
+        left: -7px;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 2px solid #FE9013;
+        border-radius: 50%;
+        background: transparent;
+    }
+
+    &__circle-active::after {
+        content: "";
+        top: -15px;
+        left: -15px;
+        position: absolute;
+        width: 42px;
+        height: 40px;
+        border: 2px solid #FE9013;
+        border-radius: 50%;
+        background: transparent;
+    }
+
+
+    &__item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__item>p {
+        position: absolute;
+        bottom: -50px;
+    }
+}
+
+
+
+
 .header {
     position: absolute;
     background-color: $black;
@@ -31,6 +114,7 @@
     &__nav {
         width: 100%;
     }
+
     &__item {
         padding: 29px 0;
     }
@@ -53,11 +137,13 @@
         margin-left: auto;
     }
 
-    
+
 }
+
 .header.header__donate {
     position: static;
 }
+
 .logo {
     padding: 3px 4px;
     text-align: center;
@@ -360,8 +446,8 @@
         bottom: 102px;
         left: 28px;
         right: 28px;
-        background: rgb(254,210,144);
-        background: linear-gradient(135deg, rgba(254,210,144,1) 70%, rgba(254,210,144,1) 70%, rgba(254,189,171,1) 100%);
+        background: rgb(254, 210, 144);
+        background: linear-gradient(135deg, rgba(254, 210, 144, 1) 70%, rgba(254, 210, 144, 1) 70%, rgba(254, 189, 171, 1) 100%);
         border-radius: 5px;
         z-index: -10;
     }
@@ -588,7 +674,7 @@
     }
 
     &__form-email__label {
-     
+
         position: relative;
         padding: 5px;
         background-clip: padding-box;
@@ -611,15 +697,16 @@
         outline-offset: 0;
     }
 
-    .footer__form >label > input:focus .footer__form > label::before{
+    .footer__form>label>input:focus .footer__form>label::before {
         background: red;
         color: red;
     }
-   
+
 
     &__form-email__input::placeholder {
         padding: 10px 7px 10px 10px;
     }
+
     &__form-email__label-inactive::before {
         content: "";
         position: absolute;
@@ -627,13 +714,13 @@
         right: 8px;
         bottom: -9px;
         left: 4px;
-        background: rgb(249,128,75);
-        background: linear-gradient(305deg, rgba(249,128,75,1) 100%, rgba(254,144,19,1) 100%);
+        background: rgb(249, 128, 75);
+        background: linear-gradient(305deg, rgba(249, 128, 75, 1) 100%, rgba(254, 144, 19, 1) 100%);
         z-index: 11;
         border-radius: 2px;
     }
 
-    &__form-email__label-focused::before{
+    &__form-email__label-focused::before {
         content: "";
         position: absolute;
         top: -9px;
@@ -668,7 +755,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    &__autor:hover > p {
+
+    &__autor:hover>p {
         color: green;
         transition: all .5s;
         cursor: pointer;
@@ -679,8 +767,9 @@
     &__item {
         display: flex;
         flex-direction: column;
-   
+
     }
+
     &__item+.social__item {
         margin-top: 10px;
     }
@@ -693,20 +782,21 @@
         margin-right: 14px;
     }
 
-    &__item:hover .social__text{
+    &__item:hover .social__text {
         color: green;
     }
 
-    &__item:hover svg circle{
+    &__item:hover svg circle {
         fill: green;
         transition: all .5s;
     }
+
     &__link {
         display: flex;
         align-items: center;
     }
 
-   
+
 }
 
 
