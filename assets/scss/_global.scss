@@ -90,11 +90,13 @@ body {
 .h2__title {
     font-size: 48px;
     line-height: 120%;
+    @extend %Roboto-400;
 }
 
 .h3__title {
     font-size: 36px;
     line-height: 130%;
+    @extend %Roboto-400;
 }
 
 .subtitle {

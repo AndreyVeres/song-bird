@@ -41,7 +41,10 @@ img {
     max-width: 100%;
     display: block;
 }
-
+button {
+    border: 0;
+    cursor: pointer;
+}
 input,
 button,
 textarea,

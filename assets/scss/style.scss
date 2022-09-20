@@ -11,10 +11,11 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-
+        margin: 0 auto;
         height: 27px;
         width: 915px;
         align-items: center;
+        margin-bottom: 98px;
     }
 
     &__container::after {
@@ -79,12 +80,11 @@
 
     &__item>p {
         position: absolute;
-        bottom: -50px;
+        bottom: -58px;
+        font-size: 26px;
+        line-height: 140%;
     }
 }
-
-
-
 
 .header {
     position: absolute;
@@ -236,6 +236,7 @@
 
     &__subtitle {
         margin-bottom: 34px;
+        font-weight: 400;
     }
 
     &__path {
@@ -478,6 +479,72 @@
 .feedFriend {
     &__title-donate {
         color: $white;
+    }
+
+    &-bg {
+        width: 100%;
+        margin-bottom: 40px;
+  
+    }
+
+    &__title-donate {
+        letter-spacing: -2.1px;
+        margin-bottom: 10px;
+    }
+
+    &-donate {
+        padding: 0;
+        color: $white;
+        padding-bottom: 180px;
+    }
+
+    &__text-donate {
+        text-shadow: 1px 1px black;
+        margin-bottom: 46px;
+    }
+
+    &__donation-title {
+        color: #FE9013;
+        margin-bottom: 60px;
+    }
+
+    &__box-donate {
+        color: #333B41;
+    }
+
+    &__diesForDay-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 41px;
+    }
+
+    &__counter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 174px;
+        
+    }
+
+    &-number {
+        font-size: 72px;
+        line-height: 57px;
+       
+    }
+
+   
+    &__x {
+        margin: 0 30px;
+    }
+
+    &__subtitle-donate {
+        margin-bottom: 98px;
+    }
+
+    &__diesImg {
+        margin-left: 82px;
+        margin-right: 137px;
     }
 }
 
@@ -799,5 +866,26 @@
 
 }
 
+.donate__form {
+    margin: 0 auto;
+    max-width: 300px;
+    text-align: center;
+
+    &-input {
+        width: 268px;
+        height: 54px;
+        border: 1px solid #929699;
+        border-radius: 2px;
+        margin-bottom: 25px;
+    }
+
+    &-input-box {
+        margin-bottom: 31px;
+    }
+
+    &-btn {
+        margin-bottom: 30px;
+    }
+}
 
 @import "media";
