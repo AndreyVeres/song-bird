@@ -120,18 +120,27 @@
                         <p>50$</p>
                     </li>
                     <li class="scale__item">
-                        <div class="scale__circle"></div>
+                        <div class="scale__circle">1</div>
                         <p>25$</p>
                     </li>
 
                 </ul>
 
                 <form class="donate__form">
-                    <input class="donate__form-input" type="number">
+                    <label class="donate__form-input__label--number" for="donate-input">
+                        <input class="donate__form-input" type="number" placeholder="Another amount">
+                    </label>
+                   
+                    
                     <div class="donate__form-input-box">
-                        <input name="select1" type="radio">Monthly
-                        <input name="select1" type="radio">Once
-                    </div>
+                        <div class="donate__form-radio">
+                            <input class="donate__form-radio__input" name="select1" id="select1" type="radio">
+                            <label class="donate__form-input__label" for="select1">Monthly</label>
+                        </div>
+                        <div class="donate__form-radio">
+                            <input class="donate__form-radio__input" name="select1" id="select2" type="radio" checked>
+                            <label class="donate__form-input__label" for="select2">Once</label>
+                        </div>                    </div>
                     <button type="submit" class="ovalBtn donate__form-btn">Feed a friend now</button>
 
                     <p>Share with your friends on social networks </p>
@@ -215,7 +224,7 @@
                 <nav class="footer__nav">
                     <ul class="footer__menu">
                         <li class="footer__item">
-                            <a href="#" class="footer__link footer__link-active">About</a>
+                            <a href="#" class="footer__link">About</a>
                         </li>
                         <li class="footer__item">
                             <a href="#" class="footer__link">Map</a>
@@ -253,7 +262,7 @@
 
         </div>
     </footer>
-
+    <script src="../main/scripts.js"></script>
 </body>
 
 

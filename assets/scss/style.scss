@@ -45,6 +45,19 @@
         position: relative;
     }
 
+    &__circle::before {
+        content: "";
+        width: 50px;
+        left: -19px;
+        top: -19px;
+        position: absolute;
+        z-index: 999;
+        height: 50px;
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+    }
+
     &__circle-active::before {
         content: "";
         top: -8px;
@@ -131,6 +144,7 @@
         background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        cursor: default;
     }
 
     &__item-last.header__item {
@@ -484,7 +498,7 @@
     &-bg {
         width: 100%;
         margin-bottom: 40px;
-  
+
     }
 
     &__title-donate {
@@ -495,7 +509,7 @@
     &-donate {
         padding: 0;
         color: $white;
-        padding-bottom: 180px;
+        padding-bottom: 178px;
     }
 
     &__text-donate {
@@ -524,19 +538,25 @@
         flex-direction: column;
         text-align: center;
         width: 174px;
-        
+        position: relative;
     }
+
+    &__counter::before {
+        content: "X";
+        position: absolute;
+        right: -18px;
+        bottom: 39px;
+    }
+    
 
     &-number {
         font-size: 72px;
         line-height: 57px;
-       
+
     }
 
-   
-    &__x {
-        margin: 0 30px;
-    }
+
+    
 
     &__subtitle-donate {
         margin-bottom: 98px;
@@ -821,6 +841,7 @@
         background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        cursor: default;
     }
 
     &__autor:hover>p {
@@ -877,15 +898,79 @@
         border: 1px solid #929699;
         border-radius: 2px;
         margin-bottom: 25px;
+        position: relative;
+    }
+
+    &-input::placeholder {
+    padding-left: 10px;
     }
 
     &-input-box {
         margin-bottom: 31px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    &-input__label--number {position: relative;}
+    &-input__label--number::before {
+        content: url(../images/dollar.svg);
+        position: absolute;
+        z-index: 99;
+        top:0;
+        right: 10px;
     }
 
     &-btn {
         margin-bottom: 30px;
     }
+
+    &-radio__input {
+        display: none;
+    }
+
+    &-input__label {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &-input__label::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: transparent;
+        border: 1px solid #FE9013;
+        border-radius: 50%;
+        left: -23px;
+    }
+
+    &-radio__input:checked+.donate__form-input__label::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        left: -21px;
+        top: 0;
+        background: #FE9013;
+        border: 1px solid #FE9013;
+        border-radius: 50%;
+    }
+
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 @import "media";

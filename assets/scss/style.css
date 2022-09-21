@@ -137,7 +137,7 @@ body {
 .arrow {
   position: absolute;
   z-index: 5;
-  top: calc(50% - 40px);
+  top: calc(50% - 63px);
   cursor: pointer;
   border: 0;
   background: transparent;
@@ -207,6 +207,18 @@ body {
   border-radius: 50%;
   background-color: yellow;
   position: relative;
+}
+.scale__circle::before {
+  content: "";
+  width: 50px;
+  left: -19px;
+  top: -19px;
+  position: absolute;
+  z-index: 999;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
 }
 .scale__circle-active::before {
   content: "";
@@ -280,6 +292,7 @@ body {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: default;
 }
 .header__item-last.header__item {
   margin-left: auto;
@@ -565,7 +578,7 @@ body {
 .feedFriend-donate {
   padding: 0;
   color: #ffffff;
-  padding-bottom: 180px;
+  padding-bottom: 178px;
 }
 .feedFriend__text-donate {
   text-shadow: 1px 1px black;
@@ -589,13 +602,17 @@ body {
   flex-direction: column;
   text-align: center;
   width: 174px;
+  position: relative;
+}
+.feedFriend__counter::before {
+  content: "X";
+  position: absolute;
+  right: -18px;
+  bottom: 39px;
 }
 .feedFriend-number {
   font-size: 72px;
   line-height: 57px;
-}
-.feedFriend__x {
-  margin: 0 30px;
 }
 .feedFriend__subtitle-donate {
   margin-bottom: 98px;
@@ -839,6 +856,7 @@ body {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: default;
 }
 .footer__autor:hover > p {
   color: green;
@@ -882,10 +900,73 @@ body {
   border: 1px solid #929699;
   border-radius: 2px;
   margin-bottom: 25px;
+  position: relative;
+}
+.donate__form-input::-moz-placeholder {
+  padding-left: 10px;
+}
+.donate__form-input:-ms-input-placeholder {
+  padding-left: 10px;
+}
+.donate__form-input::placeholder {
+  padding-left: 10px;
 }
 .donate__form-input-box {
   margin-bottom: 31px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.donate__form-input__label--number {
+  position: relative;
+}
+.donate__form-input__label--number::before {
+  content: url(../images/dollar.svg);
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 10px;
 }
 .donate__form-btn {
   margin-bottom: 30px;
+}
+.donate__form-radio__input {
+  display: none;
+}
+.donate__form-input__label {
+  position: relative;
+  cursor: pointer;
+}
+.donate__form-input__label::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 1px solid #FE9013;
+  border-radius: 50%;
+  left: -23px;
+}
+.donate__form-radio__input:checked + .donate__form-input__label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -21px;
+  top: 0;
+  background: #FE9013;
+  border: 1px solid #FE9013;
+  border-radius: 50%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }/*# sourceMappingURL=style.css.map */

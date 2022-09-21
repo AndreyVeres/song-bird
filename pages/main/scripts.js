@@ -18,3 +18,22 @@ form.addEventListener('submit', (e) => {
     btn.classList.add('footer__form-btn-default')
     btn.classList.remove('footer__form-btn')
 })
+
+
+
+
+
+
+
+
+
+
+
+// Максимально количество символов в инпуте 
+const input = document.querySelector('.donate__form-input');
+
+input.addEventListener('keydown' , () => {
+    if(input.value.length > 3){
+        input.value = input.value.slice(0,3)
+    }
+})
