@@ -1056,5 +1056,9 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+.test{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr); 
+}
 
 @import "media";

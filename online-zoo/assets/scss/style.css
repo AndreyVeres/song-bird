@@ -1027,6 +1027,11 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.test {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+}
+
 @-moz-document url-prefix() {
   .donate__form-radio__input:checked + .donate__form-input__label::after {
     content: "";
