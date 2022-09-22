@@ -136,19 +136,23 @@
         padding: 29px 0;
     }
 
+   
+
     &__item+.header__item {
         margin-left: 58px;
     }
 
     &__link {
         color: $white;
-        
+        display: block;
+        transition: all .5s;
     }
 
-    &__link:hover {
+    &__link:not(.header__link-active):hover {
         color: #ffc3a8;
         border-bottom: 1px solid #ffc3a8;
         padding-bottom: 5px;
+        transform: scale(1.1);
     }
 
     &__link-active {
@@ -310,13 +314,15 @@
         position: relative;
         transition: opacity 3s;
     }
+
     &__gallery-img__box:hover::before {
         opacity: 1;
     }
+
     &__gallery-img__box::before {
         content: '';
         position: absolute;
-        background:rgba(0, 0, 0, 0.665);
+        background: rgba(0, 0, 0, 0.665);
         top: 0;
         left: 0;
         right: 0;
@@ -361,6 +367,7 @@
         color: #fff;
         transition: all 1s;
         z-index: 9999;
+        padding: 0 10px;
     }
 
     &__gallery-item__subtitle {
@@ -495,6 +502,13 @@
         padding: 30px;
         text-align: left;
         position: relative;
+    }
+
+    &__step:nth-child(-n+2)::after {
+        content: url(../images/peekFreind-arrow.svg);
+        position: absolute;
+        top: 30%;
+        right: -70px;
     }
 
     &__step2 {
@@ -772,6 +786,7 @@
     padding: 38px 0 50px;
     color: $white;
 
+  
     a {
         color: inherit;
     }
@@ -884,10 +899,16 @@
         border-radius: 3px;
     }
 
+    &__link {
+        display: block;
+        transition: all .5s;
+    }
+
     &__link:hover {
         color: #ffc3a8;
         border-bottom: 1px solid #ffc3a8;
         padding-bottom: 5px;
+        transform: scale(1.1);
     }
 
     &__form-btn {
@@ -1053,12 +1074,14 @@ input[type=number]::-webkit-outer-spin-button {
 .amount {
     margin-bottom: 24px;
 }
+
 input[type=number] {
     -moz-appearance: textfield;
 }
-.test{
+
+.test {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr); 
+    grid-template-columns: minmax(200px, 1fr);
 }
 
 @import "media";
