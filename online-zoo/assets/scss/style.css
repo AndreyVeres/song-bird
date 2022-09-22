@@ -457,6 +457,7 @@ body {
   color: #fff;
   transition: all 1s;
   z-index: 9999;
+  padding: 0 10px;
 }
 .pets__gallery-item__subtitle {
   font-family: "Roboto";
@@ -559,6 +560,12 @@ body {
   padding: 30px;
   text-align: left;
   position: relative;
+}
+.feedFriend__step:nth-child(-n+2)::after {
+  content: url(../images/peekFreind-arrow.svg);
+  position: absolute;
+  top: 30%;
+  right: -70px;
 }
 .feedFriend__step2 {
   margin: 0 -98px;

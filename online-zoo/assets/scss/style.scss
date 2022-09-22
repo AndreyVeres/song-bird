@@ -361,6 +361,7 @@
         color: #fff;
         transition: all 1s;
         z-index: 9999;
+        padding: 0 10px;
     }
 
     &__gallery-item__subtitle {
@@ -495,6 +496,13 @@
         padding: 30px;
         text-align: left;
         position: relative;
+    }
+
+    &__step:nth-child(-n+2)::after {
+        content: url(../images/peekFreind-arrow.svg);
+        position: absolute;
+        top: 30%;
+        right: -70px;
     }
 
     &__step2 {
