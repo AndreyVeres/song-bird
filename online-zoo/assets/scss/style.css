@@ -425,7 +425,7 @@ body {
   position: relative;
   transition: opacity 3s;
 }
-.pets__gallery-img__box:hover::before {
+.pets__gallery-item:hover .pets__gallery-img__box::before {
   opacity: 1;
 }
 .pets__gallery-img__box::before {
@@ -1040,11 +1040,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-.test {
-  display: grid;
-  grid-template-columns: minmax(200px, 1fr);
 }
 
 @-moz-document url-prefix() {
