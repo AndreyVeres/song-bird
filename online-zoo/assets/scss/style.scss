@@ -818,7 +818,7 @@
 
     &__title {
         padding: 139px 0 32px;
-
+        letter-spacing: 1.1px;
         text-align: center;
     }
 
@@ -830,7 +830,7 @@
         border-radius: 20px;
         display: inline-block;
         white-space: normal;
-        margin: 15px 11px;
+        margin: 15px 0px;
         height: 388px;
     }
 
@@ -878,6 +878,9 @@
     &__box {
         white-space: nowrap;
         margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+
     }
 
     input[type=range] {
@@ -1221,7 +1224,7 @@
         left: -23px;
         top: 0px;
         background: #4B9200;
-        
+
         border-radius: 50%;
     }
 
