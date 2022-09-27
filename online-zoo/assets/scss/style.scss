@@ -113,10 +113,27 @@
         z-index: 99;
     }
 
+    @media (max-width : $tablet) {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+
     &__logo {
         margin-right: 67px;
         color: $white;
+
+
     }
+
+    &__logo>h1,
+    .header__logo p {
+        @media (max-width : $tablet) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
 
     &__box {
         display: flex;
@@ -134,12 +151,38 @@
         justify-content: flex-start;
         @extend %Roboto-500;
         width: 100%;
+
+        @media (max-width : $tablet) {
+            display: none;
+        }
+
+    }
+
+    &__menu--burger {
+        @media (max-width : $tablet) {
+            display: block;
+            color: #333B41;
+        }
+      
     }
 
     &__nav {
         width: 100%;
     }
 
+    &__nav--burger {
+        
+
+        width: 100%;
+        background-color: #fff;
+        min-height: 320px;
+        color: red;
+        position: absolute;
+        border: 1px solid red;
+        left: 0px;
+        top: 0;
+        display: none;
+    }
     &__item {
         padding: 26px 0;
     }
@@ -203,11 +246,26 @@
         line-height: 23px;
     }
 
+    &__burger {
+        background-color: orange;
+
+    }
+
     &::before {
         position: absolute;
         content: url(../images/logoImage.svg);
         left: 14px;
         bottom: 4px;
+
+        @media (max-width : $tablet) {
+            left: 6px;
+            bottom: 2px;
+            content: url(../images/logoImage-640.svg);
+        }
+    }
+
+    @media (max-width : $tablet) {
+        border: 0;
     }
 }
 
@@ -868,7 +926,7 @@
         border-radius: 20px;
         display: inline-block;
         white-space: normal;
-        margin: 15px 0px;
+        margin: 15px 11px;
         height: 388px;
 
         @media (max-width : $desctop) {
@@ -922,13 +980,14 @@
         white-space: nowrap;
         margin-bottom: 10px;
 
-
-        @media (max-width : $desctop) {
-            overflow: hidden;
-        }
-
         // display: flex;
         // justify-content: space-between;
+        overflow: hidden;
+
+        @media (max-width : $desctop) {
+
+            margin-bottom: 6px;
+        }
     }
 
     input[type=range] {
@@ -941,6 +1000,12 @@
         display: block;
         margin: 0 auto 32px;
         cursor: pointer;
+
+
+        @media (max-width : $desctop) {
+            width: 390px;
+            margin: 0 auto 52px;
+        }
     }
 
     input[type=range]::before {
@@ -963,6 +1028,11 @@
         height: 6px;
         background-color: #FE9013;
         border-radius: 5px;
+
+        @media (max-width : $desctop) {
+            width: 75px;
+        }
+
     }
 
     input[type=range]::-moz-range-track {
@@ -987,12 +1057,35 @@
     &__btn {
         border-radius: 5px;
         margin-bottom: 177px;
+
+        @media (max-width : $desctop) {
+
+            margin: 0 0 140px 21px;
+        }
+
+    }
+
+    &__decor-desctop {
+        display: none;
+
+        @media (max-width : $desctop) {
+
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -226px;
+        }
+
     }
 
     &__decor {
         position: absolute;
         bottom: -312px;
         right: 0;
+
+        @media (max-width : $desctop) {
+            display: none;
+        }
     }
 }
 
