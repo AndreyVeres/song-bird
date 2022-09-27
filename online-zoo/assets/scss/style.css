@@ -931,6 +931,7 @@ body {
 }
 .testimonials__title {
   padding: 139px 0 32px;
+  letter-spacing: 1.1px;
   text-align: center;
 }
 @media (max-width: 1001px) {
@@ -946,7 +947,7 @@ body {
   border-radius: 20px;
   display: inline-block;
   white-space: normal;
-  margin: 15px 11px;
+  margin: 15px 0px;
   height: 388px;
 }
 @media (max-width: 1001px) {

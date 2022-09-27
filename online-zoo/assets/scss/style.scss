@@ -850,7 +850,7 @@
 
     &__title {
         padding: 139px 0 32px;
-
+        letter-spacing: 1.1px;
         text-align: center;
 
 
@@ -868,7 +868,7 @@
         border-radius: 20px;
         display: inline-block;
         white-space: normal;
-        margin: 15px 11px;
+        margin: 15px 0px;
         height: 388px;
 
         @media (max-width : $desctop) {
@@ -922,9 +922,13 @@
         white-space: nowrap;
         margin-bottom: 10px;
 
+
         @media (max-width : $desctop) {
             overflow: hidden;
         }
+
+        // display: flex;
+        // justify-content: space-between;
     }
 
     input[type=range] {
