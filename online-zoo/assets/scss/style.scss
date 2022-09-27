@@ -245,7 +245,7 @@
         align-items: center;
 
         @media (max-width : $desctop) {
-            padding-left: 50%;
+            padding-left: 48%;
             padding-top: 13%;
         }
     }
@@ -285,8 +285,8 @@
         @media (max-width : $desctop) {
             width: 367px;
             height: 367px;
-            top: -55px;
-            left: -37px;
+            top: -57px;
+            left: -24px;
         }
     }
 
@@ -326,7 +326,7 @@
             &-desctop {
                 display: block;
                 max-width: 454px;
-                margin: 0 33px 0 19px;
+                margin: 0 34px 0 23px;
                 max-height: 409px;
             }
 
@@ -380,6 +380,10 @@
     margin-top: 120px;
     position: relative;
 
+    @media (max-width : $desctop) {
+        margin-top: 87px;
+    }
+
     &__gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -391,7 +395,9 @@
 
         @media (max-width : $desctop) {
             justify-items: end;
-            grid-row-gap: 86px;
+            grid-row-gap: 91px;
+            grid-column-gap: 10px;
+            margin-right: 10px;
         }
 
     }
@@ -406,6 +412,9 @@
         position: relative;
         cursor: pointer;
 
+        @media (max-width : $desctop) {
+            max-width: 295px;
+        }
     }
 
     &__gallery-img__box {
@@ -550,6 +559,11 @@
 
     &-decor-1--desctop {
         display: none;
+
+        @media (max-width : $desctop) {
+            display: block;
+            position: absolute;
+        }
     }
 
     &-decor-2 {
@@ -557,7 +571,7 @@
         bottom: -100px;
 
         @media (max-width : $desctop) {
-            right: -17px;
+            right: 0;
             bottom: -140px;
             max-width: 241px;
         }
@@ -585,7 +599,10 @@
         padding-bottom: 60px;
 
         @media (max-width : $desctop) {
-            padding-bottom: 0px;
+            // padding-bottom: 0px;
+            max-width: 96%;
+            padding-bottom: 50px;
+            margin: 0 auto;
         }
     }
 
@@ -593,7 +610,8 @@
         margin-left: 100px;
 
         @media (max-width : $desctop) {
-            margin-left: 69px;
+            margin-left: 52px;
+
         }
     }
 
@@ -631,9 +649,10 @@
         @extend %Roboto-500;
         text-align: left;
         margin-bottom: 8px;
-        
+
         @media (max-width : $desctop) {
             margin-bottom: 6px;
+            max-width: 88%;
         }
     }
 
@@ -645,6 +664,7 @@
 
         @media (max-width : $desctop) {
             margin-bottom: 39px;
+            max-width: 88%;
         }
     }
 
@@ -656,6 +676,11 @@
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 30px;
+
+        @media (max-width : $desctop) {
+            padding-bottom: 50px;
+            margin-bottom: 40px;
+        }
     }
 
     &__step {
@@ -675,7 +700,7 @@
         margin: 0 -98px;
 
         @media (max-width : $desctop) {
-            margin: 0px -32px 0 -18px;
+            margin: 0px -4px 0 10px;
         }
 
     }
@@ -764,9 +789,11 @@
         color: #FE9013;
         margin-bottom: 60px;
     }
+
     &__donation-title span {
         letter-spacing: 1.5px;
     }
+
     &__box-donate {
         color: #333B41;
     }
@@ -825,11 +852,17 @@
         padding: 139px 0 32px;
 
         text-align: center;
+
+
+        @media (max-width : $desctop) {
+            padding: 103px 0 16px;
+
+        }
     }
 
     &__item {
         background: #fff;
-        width: 268px;
+        width: 267px;
         padding: 16px 15px 17px 16px;
         position: relative;
         border-radius: 20px;
@@ -837,6 +870,11 @@
         white-space: normal;
         margin: 15px 11px;
         height: 388px;
+
+        @media (max-width : $desctop) {
+            width: 294px;
+            margin: 15px 16px;
+        }
     }
 
 
@@ -883,6 +921,10 @@
     &__box {
         white-space: nowrap;
         margin-bottom: 10px;
+
+        @media (max-width : $desctop) {
+            overflow: hidden;
+        }
     }
 
     input[type=range] {
@@ -1226,7 +1268,7 @@
         left: -23px;
         top: 0px;
         background: #4B9200;
-        
+
         border-radius: 50%;
     }
 

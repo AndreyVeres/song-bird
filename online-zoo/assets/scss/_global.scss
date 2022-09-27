@@ -67,6 +67,10 @@ body {
     border: 0;
     background: transparent;
 
+    @media (max-width : $desctop) {
+        top: calc(50% - 30px);
+    }
+   
 }
 
 .arrow-active svg circle {
