@@ -947,7 +947,7 @@ body {
   border-radius: 20px;
   display: inline-block;
   white-space: normal;
-  margin: 15px 0px;
+  margin: 15px 16px;
   height: 388px;
 }
 @media (max-width: 1001px) {
