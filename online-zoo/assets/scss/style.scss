@@ -243,8 +243,7 @@
 
     &__link:not(.header__link-active):hover {
         color: #ffc3a8;
-        border-bottom: 1px solid #ffc3a8;
-        padding-bottom: 5px;
+     
         transform: scale(1.1);
     }
 
@@ -253,7 +252,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor: default;
-        border-bottom: 1px solid #ffc3a8;
+       
         padding-bottom: 5px;
     }
 
@@ -743,7 +742,7 @@
 
         margin-bottom: 76px;
 
-        width: 1700px;
+        width: 1500px;
         display: flex;
         flex-wrap: wrap;
         gap: 23px 30px;
@@ -939,7 +938,7 @@
 .feedFriend {
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     padding: 70px 0 100px;
-
+    color: #333B41;
 
     @media (max-width : $desctop) {
         padding: 31px 0 48px;
@@ -1106,6 +1105,7 @@
 }
 
 .feedFriend {
+    color: #333B41;
     &__title-donate {
         color: $white;
     }
@@ -1200,7 +1200,7 @@
     font-size: 15px;
     line-height: 18px;
     position: relative;
-
+    color:  #767474;
 
     &__title {
         padding: 139px 0 32px;
@@ -1486,10 +1486,10 @@
     &__form-email__label-inactive::before {
         content: "";
         position: absolute;
-        top: -9px;
+        top: -7px;
         right: 8px;
-        bottom: -10px;
-        left: 8px;
+        bottom: -9px;
+        left: 9px;
         background: rgb(249, 128, 75);
         background: linear-gradient(305deg, rgba(249, 128, 75, 1) 100%, rgba(254, 144, 19, 1) 100%);
         z-index: 11;
@@ -1499,11 +1499,11 @@
     &__form-email__label-focused::before {
         content: "";
         position: absolute;
-        top: -9px;
-        right: 7px;
-        bottom: -10px;
-        left: 8px;
-        background: green;
+        top: -7px;
+        right: 8px;
+        bottom: -9px;
+        left: 9px;
+        background: #4B9200;
         z-index: 11;
         border-radius: 3px;
     }
@@ -1515,8 +1515,7 @@
 
     &__link:hover {
         color: #ffc3a8;
-        border-bottom: 1px solid #ffc3a8;
-        padding-bottom: 5px;
+      
         transform: scale(1.1);
     }
 
@@ -1543,7 +1542,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor: default;
-        border-bottom: 1px solid #ffc3a8;
+       
         padding-bottom: 5px;
     }
 
