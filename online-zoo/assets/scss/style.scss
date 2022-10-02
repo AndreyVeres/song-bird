@@ -31,7 +31,7 @@
             width: 266px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             margin-bottom: 40px;
         }
     }
@@ -66,7 +66,7 @@
             height: 16px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             left: calc(50% - 145px);
             width: 290px;
             height: 16px;
@@ -139,7 +139,7 @@
         border-radius: 50%;
         background: transparent;
 
-        @media(max-width : 500px){
+        @media(max-width : 500px) {
             width: 11px;
             height: 11px;
             top: -3px;
@@ -158,13 +158,13 @@
         border-radius: 50%;
         background: transparent;
 
-        @media(max-width : 500px){
+        @media(max-width : 500px) {
             width: 21px;
             height: 21px;
             top: -8px;
             left: -8px;
         }
-        
+
     }
 
 
@@ -1634,7 +1634,7 @@
             margin: 0 10px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             margin: 0 0;
         }
 
@@ -1697,7 +1697,7 @@
             padding-bottom: 47px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             padding-bottom: 20px;
         }
     }
@@ -1727,7 +1727,7 @@
             margin-bottom: 30px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             font-size: 24px;
             line-height: 28px;
             margin-bottom: 27px;
@@ -1749,7 +1749,7 @@
             padding-bottom: 29px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             padding-bottom: 20px;
         }
     }
@@ -1780,7 +1780,7 @@
             gap: 40px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             margin-right: 0;
             gap: 47px;
             margin-bottom: 0;
@@ -1801,14 +1801,14 @@
         right: -18px;
         bottom: 39px;
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             right: -6px;
             bottom: 22px;
         }
     }
 
-    &__counter >p:last-child{
-        @media(max-width : 500px){
+    &__counter>p:last-child {
+        @media(max-width : 500px) {
             font-size: 9px;
             line-height: 12px;
         }
@@ -1820,7 +1820,7 @@
         line-height: 57px;
         margin-bottom: 10px;
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             font-size: 40px;
             line-height: 32px;
         }
@@ -1918,7 +1918,7 @@
         white-space: normal;
         flex-basis: 25%;
         margin: 15px 11px;
-
+        cursor: pointer;
         @media (max-width : $desctop) {
             flex-basis: 33%;
             margin: 14px 20px;
@@ -2243,7 +2243,7 @@
             margin-bottom: 32px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             margin-bottom: 25px;
         }
     }
@@ -2258,7 +2258,7 @@
         justify-content: space-evenly;
         align-items: center;
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             margin-bottom: 27px;
         }
     }
@@ -2342,16 +2342,16 @@
             padding: 0px 0px 0px 12px;
         }
 
-        @media(max-width : 400px){
+        @media(max-width : 400px) {
             padding: 0px 0px 0px 0px;
         }
     }
 
     &__form-donate {
-        @media(max-width : 1000px){
+        @media(max-width : 1000px) {
             margin-right: 12px;
         }
-      
+
     }
 
     &__logo {
@@ -2646,7 +2646,45 @@
 
 }
 
+.popup {
+    position: fixed;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.692);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__wrapper {
+        background-color: #fff;
+        border-radius: 3px;
+        width: 320px;
+        height: 428px;
+        position: relative;
+        z-index: -999;
+        position: relative;
+    }
 
+    &__close{
+        position: absolute;
+        right: 17px;
+        top: 17px;
+        cursor: pointer;
+    }
+    &__box {
+        margin: 20px 17px;
+    }
+
+    &__item {
+        cursor: default;
+    }
+}
 
 
 
