@@ -28,6 +28,7 @@ const donateDots = () => {
         if(target.classList.contains('scale__circle')){
             clearDots()
             target.classList.add('scale__circle-active')
+            target.nextElementSibling.classList.add('scale__price--active')
         }
     }
     input.addEventListener('input' , checkInput)
