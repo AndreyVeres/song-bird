@@ -1,24 +1,37 @@
 const donateDots = () => {
-    const dotsParent = document.querySelector('.scale__container')
+    const input = document.querySelector('.donate__form-input')
+    const scale = document.querySelector('.scale__container')
 
-    dotsParent.addEventListener('click', (e) => {
-        const target = e.target;
-        if (target.classList.contains('scale__circle')) {
-            document.querySelectorAll('.scale__circle').
-                forEach(item => {
-                    item.classList.remove('scale__circle-active')
-                    item.nextElementSibling.classList.remove('scale__price--active')
-                });
-
+    function addMarker(price , circle){
+        price.classList.add('scale__price--active')
+        circle.classList.add('scale__circle-active')
+    } 
+    function clearDots(){
+        const circles = document.querySelectorAll('.scale__circle');
+        circles.forEach(item => {
+            item.classList.remove('scale__circle-active')
+            item.nextElementSibling.classList.remove('scale__price--active')
+        })
+    }
+    function checkInput (){
+        clearDots()
+        const prices = document.querySelectorAll('.scale__item-price')
+        prices.forEach(price => {
+            if(price.textContent.slice(1) === input.value){
+                clearDots()
+                addMarker(price ,price.previousElementSibling)
+            }
+        })
+    }
+    function addMarkerOnClick (e){
+        let target = e.target;
+        if(target.classList.contains('scale__circle')){
+            clearDots()
             target.classList.add('scale__circle-active')
-            target.nextElementSibling.classList.add('scale__price--active')
-         
-            const input = document.querySelector('.donate__form-input')
-            input.value = target.nextElementSibling.textContent.slice(1)
         }
-    })
-
-
+    }
+    input.addEventListener('input' , checkInput)
+    scale.addEventListener('click' , addMarkerOnClick)
 }
 
 export default donateDots;
