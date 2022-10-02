@@ -412,6 +412,14 @@ body {
   border-radius: 50%;
   background: transparent;
 }
+@media (max-width: 500px) {
+  .scale__circle-active::before {
+    width: 11px;
+    height: 11px;
+    top: -3px;
+    left: -3px;
+  }
+}
 .scale__circle-active::after {
   content: "";
   top: -15px;
@@ -422,6 +430,14 @@ body {
   border: 2px solid #FE9013;
   border-radius: 50%;
   background: transparent;
+}
+@media (max-width: 500px) {
+  .scale__circle-active::after {
+    width: 21px;
+    height: 21px;
+    top: -8px;
+    left: -8px;
+  }
 }
 .scale__item {
   align-items: center;

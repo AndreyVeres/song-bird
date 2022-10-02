@@ -1,3 +1,9 @@
+
+import donateDots from "../../assets/js/donateDots.js";
+try{
+    donateDots()
+}catch{}
+
 const formInput = document.querySelector('.footer__form-email__input')
 const label = document.querySelector('.footer__form-email__label');
 const form = document.querySelector('.footer__form')

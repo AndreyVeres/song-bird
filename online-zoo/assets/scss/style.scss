@@ -138,6 +138,13 @@
         border: 2px solid #FE9013;
         border-radius: 50%;
         background: transparent;
+
+        @media(max-width : 500px){
+            width: 11px;
+            height: 11px;
+            top: -3px;
+            left: -3px
+        }
     }
 
     &__circle-active::after {
@@ -150,6 +157,14 @@
         border: 2px solid #FE9013;
         border-radius: 50%;
         background: transparent;
+
+        @media(max-width : 500px){
+            width: 21px;
+            height: 21px;
+            top: -8px;
+            left: -8px;
+        }
+        
     }
 
 
