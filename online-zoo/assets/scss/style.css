@@ -2016,9 +2016,11 @@ body {
     bottom: 22px;
   }
 }
-.feedFriend__counter > p:last-child {
-  font-size: 9px;
-  line-height: 12px;
+@media (max-width: 500px) {
+  .feedFriend__counter > p:last-child {
+    font-size: 9px;
+    line-height: 12px;
+  }
 }
 .feedFriend-number {
   font-size: 72px;

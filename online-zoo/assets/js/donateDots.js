@@ -29,6 +29,7 @@ const donateDots = () => {
             clearDots()
             target.classList.add('scale__circle-active')
             target.nextElementSibling.classList.add('scale__price--active')
+            input.value = target.nextElementSibling.textContent.slice(1)
         }
     }
     input.addEventListener('input' , checkInput)
