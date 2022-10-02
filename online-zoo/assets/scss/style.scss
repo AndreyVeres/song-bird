@@ -5,8 +5,6 @@
 
 
 .scale {
-
-
     &__container {
         display: flex;
         justify-content: space-between;
@@ -16,6 +14,26 @@
         width: 915px;
         align-items: center;
         margin-bottom: 98px;
+
+        @media(max-width : 1050px) {
+            width: 787px;
+        }
+
+        @media(max-width : 850px) {
+            width: 533px;
+        }
+
+        @media(max-width : 635px) {
+            width: 409px;
+        }
+
+        @media(max-width : 500px) {
+            width: 266px;
+        }
+
+        @media(max-width : 400px){
+            margin-bottom: 40px;
+        }
     }
 
     &__container::after {
@@ -26,6 +44,33 @@
         background-color: #404950;
         z-index: -99;
         left: calc(50% - 488px);
+
+        @media(max-width : 1050px) {
+            left: calc(50% - 406px);
+            width: 812px;
+        }
+
+        @media(max-width : 850px) {
+            left: calc(50% - 304px);
+            width: 600px;
+        }
+
+        @media(max-width : 635px) {
+            left: calc(50% - 221px);
+            width: 444px;
+        }
+
+        @media(max-width : 500px) {
+            left: calc(50% - 154px);
+            width: 300px;
+            height: 16px;
+        }
+
+        @media(max-width : 400px){
+            left: calc(50% - 145px);
+            width: 290px;
+            height: 16px;
+        }
     }
 
     &__container::before {
@@ -34,6 +79,22 @@
         width: 915px;
         height: 3px;
         background: #72828E;
+
+        @media(max-width : 1050px) {
+            width: 785px;
+        }
+
+        @media(max-width : 850px) {
+            width: 522px;
+        }
+
+        @media(max-width : 635px) {
+            width: 399px;
+        }
+
+        @media(max-width : 500px) {
+            width: 263px;
+        }
     }
 
     &__price--active {
@@ -47,6 +108,11 @@
         background-color: yellow;
 
         position: relative;
+
+        @media(max-width : 500px) {
+            width: 5px;
+            height: 5px;
+        }
     }
 
     &__circle::before {
@@ -93,6 +159,27 @@
         flex-direction: column;
         position: relative;
         cursor: pointer;
+
+
+    }
+
+    &__item:first-child {
+        @media(max-width: 1050px) {
+            display: none;
+        }
+
+    }
+
+    &__item:nth-child(2) {
+        @media(max-width : 850px) {
+            display: none;
+        }
+    }
+
+    &__item:nth-child(3) {
+        @media (max-width : 640px) {
+            display: none;
+        }
     }
 
     &__item>p {
@@ -100,6 +187,16 @@
         bottom: -58px;
         font-size: 26px;
         line-height: 140%;
+
+        @media(max-width : 1050px) {
+            left: -10px;
+        }
+
+        @media(max-width : 500px) {
+            font-size: 13px;
+            line-height: 18px;
+            bottom: -27px;
+        }
     }
 }
 
@@ -298,6 +395,8 @@
             bottom: 2px;
             content: url(../images/logoImage-640.svg);
         }
+
+
     }
 
     @media (max-width : 778px) {
@@ -462,8 +561,8 @@
         @media (max-width : $mobile) {
             font-size: 27px;
             line-height: 21px;
-            max-width: 107px;
-
+            // max-width: 107px;
+            max-width: 114px;
             margin: 42px 12px 0 0;
         }
     }
@@ -1452,42 +1551,172 @@
 .feedFriend {
     color: #333B41;
 
-    &__title-donate {
-        color: $white;
+    &__info-box-donate {
+        @media(max-width : 640px) {
+            margin-left: 0;
+        }
+    }
+
+    &__info-box-donate {
+        @media(max-width : 1000px) {
+            margin-left: 0px;
+        }
+
     }
 
     &-bg {
         width: 100%;
         margin-bottom: 40px;
         max-height: 386px;
+
+        @media(max-width : 1000px) {
+            display: none;
+        }
+    }
+
+
+    &-bg-1000 {
+        display: none;
+
+        @media(max-width :1000px) {
+            display: block;
+            margin-bottom: 41px;
+        }
+
+        @media(max-width : 640px) {
+            display: none;
+        }
+    }
+
+    &-bg-640 {
+        display: none;
+
+        @media(max-width :640px) {
+            display: block;
+            margin-bottom: 31px
+        }
+
+        @media(max-width : 320px) {
+            display: none;
+        }
+    }
+
+    &-bg-320 {
+        display: none;
+
+        @media(max-width : 320px) {
+            display: block;
+            margin-bottom: 33px;
+        }
+    }
+
+    &__text-box-donate {
+        @media(max-width : 1000px) {
+            margin: 0 20px;
+        }
+
+        @media(max-width : 640px) {
+            margin: 0 10px;
+        }
+
+        @media(max-width : 400px){
+            margin: 0 0;
+        }
+
     }
 
     &__pick {
         margin-bottom: 24px;
         padding-top: 37px;
+
+        @media(max-width : 1000px) {
+            margin-bottom: 12px;
+            padding-top: 19px;
+        }
+
+        @media(max-width : 640px) {
+            font-size: 48px;
+            line-height: 57px;
+            padding-top: 29px;
+            margin-bottom: 24px;
+        }
+
+        @media(max-width : 400px) {
+            font-size: 24px;
+            line-height: 28px;
+            padding-top: 23px;
+            margin-bottom: 7px;
+        }
+
+
     }
 
     &__title-donate {
         letter-spacing: -1.6px;
         margin-bottom: 10px;
+
+        @media(max-width : 1000px) {
+            // letter-spacing: 1.6px;
+            max-width: 780px;
+            margin-bottom: 29px;
+        }
+
+        @media(max-width : 640px) {
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -1px;
+            margin-bottom: 19px;
+        }
     }
 
     &-donate {
         padding: 0;
         color: $white;
         padding-bottom: 182px;
+
+        @media(max-width : 1000px) {
+            padding-bottom: 28px;
+        }
+
+        @media(max-width : 640px) {
+            padding-bottom: 47px;
+        }
+
+        @media(max-width : 400px){
+            padding-bottom: 20px;
+        }
     }
 
     &__text-donate {
         margin-bottom: 46px;
         max-width: 96%;
         font-size: 16px;
+
         // line-height: 22px;
+        @media(max-width : 640px) {
+            margin-bottom: 30px;
+        }
+
+
     }
 
     &__donation-title {
         color: #FE9013;
         margin-bottom: 60px;
+
+        @media(max-width : 1000px) {
+            margin-bottom: 41px;
+        }
+
+        @media(max-width : 640px) {
+            margin-bottom: 30px;
+        }
+
+        @media(max-width : 400px){
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 27px;
+        }
     }
 
     &__donation-title span {
@@ -1496,6 +1725,18 @@
 
     &__box-donate {
         color: #333B41;
+
+        @media(max-width : 1000px) {
+            padding-bottom: 46px;
+        }
+
+        @media(max-width : 640px) {
+            padding-bottom: 29px;
+        }
+
+        @media(max-width : 400px){
+            padding-bottom: 20px;
+        }
     }
 
     &__diesForDay-box {
@@ -1503,6 +1744,32 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 41px;
+
+        @media(max-width : 1000px) {
+            gap: 80px;
+            margin-right: 41px;
+            margin-bottom: 46px;
+        }
+
+        @media(max-width : 640px) {
+            gap: 78px;
+            margin-right: 38px;
+            margin-bottom: 35px;
+        }
+
+        @media(max-width : 635px) {
+            gap: 10px;
+        }
+
+        @media(max-width : 500px) {
+            gap: 40px;
+        }
+
+        @media(max-width : 400px){
+            margin-right: 0;
+            gap: 47px;
+            margin-bottom: 0;
+        }
     }
 
     &__counter {
@@ -1518,6 +1785,16 @@
         position: absolute;
         right: -18px;
         bottom: 39px;
+
+        @media(max-width : 400px){
+            right: -6px;
+            bottom: 22px;
+        }
+    }
+
+    &__counter >p:last-child{
+        font-size: 9px;
+        line-height: 12px;
     }
 
 
@@ -1525,6 +1802,11 @@
         font-size: 72px;
         line-height: 57px;
         margin-bottom: 10px;
+
+        @media(max-width : 400px){
+            font-size: 40px;
+            line-height: 32px;
+        }
     }
 
 
@@ -1532,11 +1814,46 @@
 
     &__subtitle-donate {
         margin-bottom: 105px;
+        margin-left: -50px;
+
+        @media(max-width : 1000px) {
+            margin-left: 56px;
+        }
+
+        @media(max-width : 640px) {
+            max-width: 610px;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-left: 0;
+        }
+
+        @media(max-width : 400px) {
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: normal;
+            margin-bottom: 37px;
+        }
     }
 
     &__diesImg {
         margin-left: 82px;
         margin-right: 137px;
+
+        @media(max-width : 1000px) {
+            margin: 0;
+        }
+
+        @media(max-width : 500px) {
+            display: none;
+        }
+    }
+
+    &__diesImg-320 {
+        display: none;
+
+        @media (max-width : 500px) {
+            display: block;
+        }
     }
 }
 
@@ -1902,6 +2219,16 @@
         margin-bottom: 25px;
         position: relative;
         background: transparent;
+
+        @media(max-width : 640px) {
+            width: 180px;
+            height: 42px;
+            margin-bottom: 32px;
+        }
+
+        @media(max-width : 400px){
+            margin-bottom: 25px;
+        }
     }
 
     &-input::placeholder {
@@ -1913,6 +2240,10 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        @media(max-width : 400px){
+            margin-bottom: 27px;
+        }
     }
 
     &-input__label--number {
@@ -1984,6 +2315,28 @@
         padding: 17px 0 61px;
     }
 
+
+    &__box-donate.footer__box {
+        @media(max-width :1000px) {
+            padding: 0px 13px 0 22px;
+        }
+
+        @media(max-width : 640px) {
+            padding: 0px 0px 0px 12px;
+        }
+
+        @media(max-width : 400px){
+            padding: 0px 0px 0px 0px;
+        }
+    }
+
+    &__form-donate {
+        @media(max-width : 1000px){
+            margin-right: 12px;
+        }
+      
+    }
+
     &__logo {
         border: 1px solid #fff;
 
@@ -1991,6 +2344,13 @@
             display: flex;
             border: 0;
             justify-content: center;
+        }
+    }
+
+    &__logo::before {
+        @media(max-width : 600px) {
+            left: 51px;
+            bottom: 8px;
         }
     }
 
@@ -2020,7 +2380,7 @@
     &__btn {
         border-radius: 5px;
         margin-bottom: 45px;
-        
+
         @media (max-width : 600px) {
             margin-bottom: 0;
         }
@@ -2061,7 +2421,7 @@
         gap: 67px;
 
         @media(max-width : 640px) {
-            gap: 33px;
+            gap: 29px;
 
         }
 
@@ -2295,6 +2655,16 @@ input[type=number]::-webkit-outer-spin-button {
 
 .amount {
     margin-bottom: 24px;
+
+    @media(max-width : 1000px) {
+        margin-left: 70px;
+        margin-bottom: 18px;
+    }
+
+    @media(max-width : 640px) {
+        margin-left: 20px;
+        margin-bottom: 7px;
+    }
 }
 
 input[type=number] {
