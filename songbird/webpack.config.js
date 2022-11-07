@@ -18,16 +18,41 @@ module.exports = {
     devServer: {
         open: true
     },
-    entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+    // entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+    entry: {
+        page1: path.resolve(__dirname, 'src', 'js', 'page1.js'),
+        page2: path.resolve(__dirname, 'src', 'js', 'page2.js')
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        filename: '[name].[contenthash].js'
+        filename: '[name].bundle.js'
     },
+    // optimizations : {
+    //     splitChunks : {
+    //         chunks : 'all',
+    //         maxInitialRequest :Infinity ,
+    //         cacheGroups : {
+
+    //         }
+    //     }
+    // }
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src', 'index.html')
+            filename : 'index.html' ,
+            template: path.resolve(__dirname, 'src','index.html') ,
+            minify : false ,
+            chunks : ['page1']
+            
         }),
+        new HtmlWebpackPlugin({
+
+            filename : 'index2.html',
+            template: path.resolve(__dirname, 'src','index2.html'),
+            minify :false,
+            chunks : ['page2']
+        }),
+       
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         })
@@ -71,7 +96,7 @@ module.exports = {
                     }
                 }
             },
-          
+
         ],
 
     }
