@@ -7,11 +7,6 @@ import './main.scss';
 import { player, player2 } from '../../scripts/player';
 import { aboutBird, removeAbout } from '../../scripts/aboutBird';
 
-
-
-
-
-
 initQuestion(vars.questIndex);
 
 export function initQuestion(index) {

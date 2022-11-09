@@ -1,26 +1,4 @@
 import { vars } from "./variables";
-export const player = () => {
-
-    const player = document.querySelector('.player');
-    const playBtn = document.querySelector('.control');
-    const songProgress = document.querySelector('.progress');
-    const volume = document.querySelector('.volume__progress');
-    const voice = document.querySelector('.voice');
-    const audio = document.querySelector('.audio');
-
-    function playSong() {
-        try {
-            document.querySelector('.about__audio').pause();
-        } catch { }
-
-        voice.src = vars.currentBird.audio;
-        audio.load()
-        audio.play()
-    }
-    playBtn.addEventListener('click', playSong);
-}
-
-
 
 export function player2(player) {
     let isPlaying = false;
