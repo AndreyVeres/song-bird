@@ -1,0 +1,115 @@
+body {
+    color: #fff;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header__box {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.menu {
+    &__list {
+        display: flex;
+        gap: 30px;
+        padding: 0;
+    }
+
+
+}
+
+img {
+    max-width: 300px;
+}
+
+
+
+.player {
+    background-color: gray;
+    width: 250px;
+    border: 1px solid;
+    border-radius: 7px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .audio {
+        display: none;
+    }
+    .control {
+        cursor: pointer;
+    }
+    .progress__bar {
+        background-color: rgba(245, 245, 245, 0.336);
+        height: 4px;
+        flex-basis: 70%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+    }
+    .progress {
+    
+        height: 4px;
+        background-color: black;
+    }
+    // .volume {
+    //     cursor: pointer;
+    //     position: relative;
+    //     &__bar {
+    //         background-color: rgba(245, 245, 245, 0.336);
+    //         width: 10px;
+    //         height: 41px;
+    //         position: relative;
+    //     }
+    //     &__progress {
+    //         width: 10px;
+            
+    //         background-color: black;
+    //         position: absolute;
+    //         bottom: 0;
+    //     }
+    // }
+
+    .volume__bar {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.volume__range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    border-radius: 5px;
+    display: block;
+    right: 0;
+    bottom: -22px;
+    cursor: pointer;
+    background-color: rgba(245, 245, 245, 0.336);
+}
+
+
+// input[type=range]::-webkit-slider-thumb {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     width: 115px;
+//     height: 6px;
+//     background-color: black;
+
+// }
+// input[type=range]::-moz-range-track {
+//     -moz-appearance: none;
+// }
+// input[type=range]::-moz-range-thumb {
+//     -moz-appearance: none;
+// }

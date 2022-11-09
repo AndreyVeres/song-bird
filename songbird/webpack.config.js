@@ -1,58 +1,45 @@
 require("@babel/polyfill");
-
 const path = require('path');
+// console.log(path.resolve(__dirname, 'src', 'pages', 'main', 'main.html'))
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const mode = process.env.NODE_ENV || 'development';
-const devMode = mode === 'development'
-const target = devMode ? 'web' : 'browserslist'
+const devMode = mode === 'development';
+const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
-
-
 
 module.exports = {
     mode,
     target,
     devtool,
     devServer: {
-        open: true
+        open: true,
     },
     // entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+   
     entry: {
-        page1: path.resolve(__dirname, 'src', 'js', 'page1.js'),
-        page2: path.resolve(__dirname, 'src', 'js', 'page2.js')
+        main: path.resolve(__dirname, 'src', 'pages', 'main', 'index.js'),
+        results: path.resolve(__dirname, 'src', 'pages', 'results', 'results.js'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
         filename: '[name].bundle.js'
     },
-    // optimizations : {
-    //     splitChunks : {
-    //         chunks : 'all',
-    //         maxInitialRequest :Infinity ,
-    //         cacheGroups : {
-
-    //         }
-    //     }
-    // }
     plugins: [
         new HtmlWebpackPlugin({
-            filename : 'index.html' ,
-            template: path.resolve(__dirname, 'src','index.html') ,
-            minify : false ,
-            chunks : ['page1']
-            
+            filename: 'index.html',
+            template: path.resolve(__dirname, 'src', 'pages', 'main', 'index.html'),
+            chunks: ['main']
+
         }),
         new HtmlWebpackPlugin({
-
-            filename : 'index2.html',
-            template: path.resolve(__dirname, 'src','index2.html'),
-            minify :false,
-            chunks : ['page2']
+            filename: 'results.html',
+            template: path.resolve(__dirname, 'src', 'pages', 'results', 'results.html'),
+            minify: false,
+            chunks: ['results']
         }),
-       
+
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         })
@@ -86,19 +73,16 @@ module.exports = {
                     filename: 'fonts/[name][ext]'
                 }
             },
-            {
-                test: /\.m?js$/i,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
-            },
-
+            // {
+            //     test: /\.m?js$/i,
+            //     exclude: /(node_modules|bower_components)/,
+            //     use: {
+            //         loader: 'babel-loader',
+            //         options: {
+            //             presets: ['@babel/preset-env']
+            //         }
+            //     }
+            // },
         ],
-
     }
-
 }
