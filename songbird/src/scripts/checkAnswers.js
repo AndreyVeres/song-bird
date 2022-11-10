@@ -1,7 +1,6 @@
 import { initQuestion, verifyAnswer } from "../pages/main";
 import { elems, vars, sounds } from "./variables";
 
-
 export function correctAnswer() {
     vars.haveAnswer = true;
     this.classList.add('correct__answer');
