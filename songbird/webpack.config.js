@@ -73,6 +73,30 @@ module.exports = {
                     filename: 'fonts/[name][ext]'
                 }
             },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                  },
+              }
+            // {
+            //     test: /\.(png|jpe?g|gif|svg)$/i,
+            //     loader: 'file-loader',
+            //     options: {
+            //       name(resourcePath, resourceQuery) {
+            //         // `resourcePath` - `/absolute/path/to/file.js`
+            //         // `resourceQuery` - `?foo=bar`
+        
+            //         if (process.env.NODE_ENV === 'development') {
+            //           return '[path][name].[ext]';
+            //         }
+        
+            //         return '[contenthash].[ext]';
+            //       },
+            //     },
+            //   },
+        
             // {
             //     test: /\.m?js$/i,
             //     exclude: /(node_modules|bower_components)/,

@@ -1,4 +1,5 @@
 import { vars } from "./variables";
+import pauseImg from '../img/pause.svg'
 
 export function player2(player) {
     let isPlaying = false;
@@ -10,13 +11,15 @@ export function player2(player) {
     const volProgress = _player.querySelector('.volume__progress');
     const audio = _player.querySelector('.audio');
 
-
+    
+    console.log(pauseImg)
     const input = _player.querySelector('.volume__range')
 
 
     function playSong() {
         isPlaying ? audio.pause() : audio.play()
         isPlaying = !isPlaying;
+        this.src = pauseImg
     }
 
     function updateTime(e) {
