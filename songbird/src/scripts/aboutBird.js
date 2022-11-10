@@ -1,16 +1,17 @@
 import birdsData from "./birdsData";
-import { player, player2 } from "./player";
-import { elems, vars } from "./variables";
+import { player2 } from "./player";
+import { vars } from "./variables";
+import playImg from '../img/play.svg';
 
 export function aboutBird() {
-    removeAbout()
+    removeAbout();
 
     let bird = vars.haveAnswer ?
         birdsData[vars.questIndex - 1][parseInt(this.id) - 1] :
         birdsData[vars.questIndex][parseInt(this.id) - 1];
 
     const text = document.querySelector('.about__default-text');
-    text.style.display = 'none'
+    text.style.display = 'none';
     const parent = document.querySelector('.quiz__botton-panel-box');
     let about = document.createElement('div');
     about.classList.add('about', 'about__player');
@@ -27,7 +28,7 @@ export function aboutBird() {
                 <source class="voice" type="audio/mpeg" 
                 src="${bird.audio}">
             </audio>
-                <img class="playBtn control" src="./img/play.svg" alt="control">
+                <img class="playBtn control" src="${playImg}" alt="control">
             <div class="progress__bar">
                 <div class="progress">
                 </div>
@@ -41,14 +42,14 @@ export function aboutBird() {
     </div>
     `;
     parent.append(about);
-    player2('.about__player')
-}
+    player2('.about__player');
+};
 
 
 export function removeAbout() {
     try {
         document.querySelector('.about').remove();
         const text = document.querySelector('.about__default-text');
-        text.style.display = 'block'
+        text.style.display = 'block';
     } catch { }
-}
+};

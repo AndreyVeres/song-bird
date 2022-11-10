@@ -1,3 +1,7 @@
+import correctSound from '../audio/correct.mp3';
+import wrongSound from '../audio/wrong.mp3';
+
+
 export const elems = {
     img: document.querySelector('.quiz__player-img'),
     plugSrc: document.querySelector('.quiz__player-img').src,
@@ -7,16 +11,16 @@ export const elems = {
     score: document.querySelector('.score'),
     question: document.querySelectorAll('.quiz__quest-item'),
     nextLevel: document.querySelector('.next__level'),
-    answersItems: document.querySelectorAll('.answers__item'),
+    answersItems: document.querySelectorAll('.quiz__quest-item-text'),
     clearField: function () {
         this.answersItems.forEach(item => {
-            item.classList.remove('correct__answer', 'wrong__answer')
+            item.classList.remove('correct__answer', 'wrong__answer');
         });
         this.question.forEach(item => {
-            item.classList.remove('quiz__quest-item--active')
-        })
+            item.classList.remove('quiz__quest-item--active');
+        });
     },
-}
+};
 
 export const vars = {
     currPoints: 5,
@@ -24,4 +28,10 @@ export const vars = {
     questIndex: 0,
     currentBird: {},
     haveAnswer: false,
-}
+};
+
+
+export const sounds = {
+    wrong: new Audio(wrongSound),
+    correct: new Audio(correctSound),
+};

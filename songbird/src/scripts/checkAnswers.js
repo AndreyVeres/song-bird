@@ -1,5 +1,5 @@
 import { initQuestion, verifyAnswer } from "../pages/main";
-import { elems, vars } from "./variables";
+import { elems, vars, sounds } from "./variables";
 
 
 export function correctAnswer() {
@@ -8,11 +8,13 @@ export function correctAnswer() {
     let addScore = vars.totalPoints += vars.currPoints;
     vars.currPoints = 5;
     elems.score.textContent = 'Score' + ' : ' + addScore;
-
     elems.img.src = vars.currentBird.image;
     elems.name.textContent = vars.currentBird.name
     vars.questIndex++;
-    
+    sounds.correct.play()
+    setTimeout(() => {
+        sounds.correct.load()
+    }, 600);
     elems.nextLevel.disabled = false;
     elems.nextLevel.addEventListener('click', function () {
         elems.clearField();
@@ -24,6 +26,10 @@ export function correctAnswer() {
 export function wrongAnswer() {
     this.classList.add('wrong__answer');
     vars.currPoints--;
+    sounds.wrong.play();
+    setTimeout(() => {
+        sounds.wrong.load();
+    }, 600);
 }
 
 

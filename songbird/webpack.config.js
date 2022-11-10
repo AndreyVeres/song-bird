@@ -16,10 +16,10 @@ module.exports = {
         open: true,
     },
     // entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
-   
+
     entry: {
         main: path.resolve(__dirname, 'src', 'pages', 'main', 'index.js'),
-        results: path.resolve(__dirname, 'src', 'pages', 'results', 'results.js'),
+        gallery: path.resolve(__dirname, 'src', 'pages', 'gallery', 'gallery.js'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -34,10 +34,10 @@ module.exports = {
 
         }),
         new HtmlWebpackPlugin({
-            filename: 'results.html',
-            template: path.resolve(__dirname, 'src', 'pages', 'results', 'results.html'),
+            filename: 'gallery.html',
+            template: path.resolve(__dirname, 'src', 'pages', 'gallery', 'gallery.html'),
             minify: false,
-            chunks: ['results']
+            chunks: ['gallery']
         }),
 
         new MiniCssExtractPlugin({
@@ -75,11 +75,18 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]',
-                  },
-              }
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
+            },
+            {
+                test: /\.mp3$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'audio/[name][ext]'
+                }
+            }
             // {
             //     test: /\.(png|jpe?g|gif|svg)$/i,
             //     loader: 'file-loader',
@@ -87,16 +94,16 @@ module.exports = {
             //       name(resourcePath, resourceQuery) {
             //         // `resourcePath` - `/absolute/path/to/file.js`
             //         // `resourceQuery` - `?foo=bar`
-        
+
             //         if (process.env.NODE_ENV === 'development') {
             //           return '[path][name].[ext]';
             //         }
-        
+
             //         return '[contenthash].[ext]';
             //       },
             //     },
             //   },
-        
+
             // {
             //     test: /\.m?js$/i,
             //     exclude: /(node_modules|bower_components)/,
