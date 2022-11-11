@@ -1,7 +1,7 @@
 import correctSound from '../audio/correct.mp3';
 import wrongSound from '../audio/wrong.mp3';
 
-export let lang = 'r'
+export let lang = 'ru'
 
 export const elems = {
     img: document.querySelector('.quiz__player-img'),

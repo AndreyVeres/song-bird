@@ -8,6 +8,7 @@
 .quiz {
     background-color: rgba(0, 0, 0, 0.226);
     padding: 30px 0;
+
     &__box {
         display: flex;
         flex-direction: column;
@@ -23,6 +24,7 @@
     }
 
     &__player-box {
+        flex-basis: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -41,12 +43,14 @@
         background-color: red;
     }
 }
+
 .progress__panel {
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .quiz__botton-panel-box {
     display: flex;
     background-color: rgba(0, 0, 0, 0.507);
@@ -57,7 +61,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex-basis: 50%;
+    flex-basis: 30%;
     align-items: flex-start;
     padding-left: 50px;
 }
@@ -68,13 +72,23 @@
 
 
 .about {
-    flex-basis: 50%;
+    
     display: flex;
     flex-direction: column;
     gap: 20px;
     opacity: 1;
+
+    flex-basis: 100%;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        align-items: center;
+    }
     &__top-panel {
         display: flex;
+        /* flex-basis: 70%; */
+        justify-content: space-between;
     }
 }
 
@@ -119,7 +133,7 @@
     position: relative;
 }
 
-.quiz__quest-item-text::before{
+.quiz__quest-item-text::before {
     content: '';
     width: 10px;
     height: 10px;
@@ -132,22 +146,21 @@
 
 
 .player {
-    background-color: gray;
-    width: 250px;
-    border: 1px solid;
-    border-radius: 7px;
-    padding: 10px;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     gap: 10px;
+
     .audio {
         display: none;
     }
+
     .control {
         cursor: pointer;
     }
+
     .progress__bar {
         background-color: rgba(245, 245, 245, 0.336);
         height: 4px;
@@ -157,8 +170,9 @@
         cursor: pointer;
         width: 100%;
     }
+
     .progress {
-    
+
         height: 4px;
         background-color: black;
     }
@@ -181,14 +195,29 @@ input[type='range'] {
 
 input[type='range']::-webkit-slider-runnable-track {
     height: 8px;
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
 }
 
-input[type='range']::-webkit-slider-thumb { //ползунок
+input[type='range']::-webkit-slider-thumb {
+    //ползунок
     width: 10px;
     -webkit-appearance: none;
     height: 10px;
     cursor: pointer;
     background: black;
     box-shadow: -80px 0 0 80px black;
+}
+
+
+
+.main__menu-box {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.main__menu-item {
+    border: 1px solid black;
+    width: 200px;
+    height: 400px;
 }

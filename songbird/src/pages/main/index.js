@@ -11,7 +11,7 @@ import { aboutBird, removeAbout } from '../../scripts/aboutBird';
 
 
 
-translatePage()
+// translatePage()
 import logo from '../../img/logo.svg'
 
 initQuestion(vars.questIndex);
