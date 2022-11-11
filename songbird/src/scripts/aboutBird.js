@@ -1,6 +1,6 @@
 import birdsData from "./birdsData";
 import { player2 } from "./player";
-import { vars } from "./variables";
+import { vars ,lang} from "./variables";
 import playImg from '../img/play.svg';
 
 export function aboutBird() {
@@ -21,7 +21,7 @@ export function aboutBird() {
         <img src="${bird.image}" alt="about-img"
             class="about__img">
         <div class="about__info">
-        <h3 class="about__info-name">${bird.name}</h3>
+        <h3 class="about__info-name">${lang === 'ru' ? bird.name : bird.nameEn}</h3>
         <p class="about__info-family">${bird.species}</p>
         <div class="player">
             <audio controls class="audio about__player">
@@ -38,7 +38,7 @@ export function aboutBird() {
          </div>
         </div>
         <div class="about__addition-info">
-          ${bird.description}
+          ${lang === 'ru' ? bird.description : bird.descriptionEn}
     </div>
     `;
     parent.append(about);
