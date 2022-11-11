@@ -1,7 +1,8 @@
 import birdsData from '../../scripts/birdsData';
-import { elems, vars, lang } from '../../scripts/variables';
+import { elems, vars, lang , translationArr} from '../../scripts/variables';
 import { randomInteger, renderPlayer } from '../../scripts/helpers';
 import { correctAnswer, wrongAnswer } from '../../scripts/checkAnswers';
+import {translatePage} from '../../scripts/language';
 import './index.html';
 import './main.scss';
 import { player, player2 } from '../../scripts/player';
@@ -9,6 +10,8 @@ import { aboutBird, removeAbout } from '../../scripts/aboutBird';
 
 
 
+
+translatePage()
 import logo from '../../img/logo.svg'
 
 initQuestion(vars.questIndex);

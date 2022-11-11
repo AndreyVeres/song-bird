@@ -37,3 +37,52 @@ export const sounds = {
     wrong: new Audio(wrongSound),
     correct: new Audio(correctSound),
 };
+[]
+export const translationArr = {
+    'lng-mainPage': {
+        'ru': 'Главная',
+        'en': 'Main page'
+    },
+    'lng-galleryPage': {
+        'ru': 'Галерея',
+        'en': 'Gallery page'
+    },
+    'lng-score': {
+        'ru': 'Очки',
+        'en': 'Score'
+    },
+    'lng-button': {
+        'ru': 'Далее',
+        'en': 'Next level'
+    },
+    'lng-q1': {
+        'ru': 'Разминка',
+        'en': 'Warm-up'
+    },
+    'lng-q2': {
+        'ru': 'Воробьиные',
+        'en': 'Passerines'
+    },
+    'lng-q3': {
+        'ru': 'Лесные',
+        'en': 'Forest'
+    },
+
+    'lng-q4': {
+        'ru': 'Певчие',
+        'en': 'Choristers'
+    },
+    'lng-q5': {
+        'ru': 'Хищные',
+        'en': 'Predatory'
+    },
+    'lng-q6': {
+        'ru': 'Морские',
+        'en': 'Marine'
+    },
+    'lng-text': {
+        'ru': 'Послушайте плеер. Выберите птицу из списка',
+        'en': 'Listen to the player. Select a bird from the list'
+    },
+
+}
