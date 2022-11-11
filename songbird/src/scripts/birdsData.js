@@ -199,7 +199,7 @@ const birdsData = [
       {
         id: 2,
         name: 'Соловей',
-        name : 'Nightingale',
+        nameEn : 'Nightingale',
         species: 'Luscinia luscinia',
         description: 'Соловьи поют с начала мая и до конца лета. Каждая песня соловья состоит из 12 повторяющихся элементов, которые еще называют коленами. Кроме собственных трелей, соловьи легко и хорошо перенимают пение других птиц.',
         descriptionEn : 'Nightingales sing from the beginning of May until the end of summer. Each song of the nightingale consists of 12 repeating elements, which are also called knees. In addition to their own trills, nightingales easily and well adopt the singing of other birds.',
