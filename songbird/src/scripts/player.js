@@ -1,5 +1,5 @@
-import pauseImg from '../img/pause.svg';
-import playImg from '../img/play.svg';
+import pauseImg from '../img/pencil__pause.svg';
+import playImg from '../img/pencil__play.svg';
 
 export function player2(player) {
     const _player = document.querySelector(player)
