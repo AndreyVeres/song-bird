@@ -1,5 +1,8 @@
 import pauseImg from '../img/pencil__pause.svg';
 import playImg from '../img/pencil__play.svg';
+import volumeFull from '../img/volumeFull.svg';
+import volumeMute from '../img/volumeMute.svg';
+
 
 export function player2(player) {
     const _player = document.querySelector(player)
@@ -8,6 +11,10 @@ export function player2(player) {
     const timeProgress = _player.querySelector('.progress');
     const audio = _player.querySelector('.audio');
     const volume = _player.querySelector('.volume__range');
+    // const muteImg = _player.querySelector('.mute__img');
+
+    const volumeFull = document.querySelector('.volumeFull')
+    const volumeMute = document.querySelector('.volumeMute')
 
     let isPlaying = false;
 
@@ -20,6 +27,8 @@ export function player2(player) {
             this.src = pauseImg;
         }
         isPlaying = !isPlaying;
+
+        
     };
 
     function updateTime(e) {
@@ -36,8 +45,18 @@ export function player2(player) {
     };
 
     function setVolume (e){
-        audio.volume = e.target.value;
+        let currentVolume = e.target.value;
+        audio.volume = currentVolume;        
     };
+
+    function imageChange(){
+        if(audio.volume === 0){
+            console.log('asd')
+            volumeMute.style.display = 'block';
+            volumeFull.style.display = 'none'
+        }
+    }
+    volume.addEventListener('change' , imageChange)
 
     volume.addEventListener('click' , setVolume);
     timeProgressBar.addEventListener('click', setTime);

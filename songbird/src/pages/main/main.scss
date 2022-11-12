@@ -146,7 +146,7 @@
 
 
 .player {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -162,7 +162,9 @@
     }
 
     .progress__bar {
-        background-color: rgba(245, 245, 245, 0.336);
+        // background-color: rgba(245, 245, 245, 0.336);
+        background-color: transparent;
+        border: 1px solid black;
         height: 4px;
         flex-basis: 70%;
         display: flex;
@@ -177,10 +179,10 @@
         background-color: black;
     }
 
-    .volume__bar {
-        display: flex;
-        flex-direction: column;
-    }
+    // .volume__bar {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
 }
 
 
@@ -188,21 +190,28 @@ input[type='range'] {
     overflow: hidden;
     width: 50px;
     -webkit-appearance: none;
-    background-color: rgba(245, 245, 245, 0.336);
+    // background-color: rgba(245, 245, 245, 0.336);
+    background-color: transparent;
+    border: 1px solid black;
     transform: rotate(270deg);
     cursor: pointer;
+    position: relative;
+}
+
+.volume__bar {
+    // display: flex;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-    height: 8px;
+    height: 6px;
     -webkit-appearance: none;
 }
 
 input[type='range']::-webkit-slider-thumb {
     //ползунок
-    width: 10px;
+    width: 0px;
     -webkit-appearance: none;
-    height: 10px;
+    // height: 0px;
     cursor: pointer;
     background: black;
     box-shadow: -80px 0 0 80px black;
@@ -220,4 +229,18 @@ input[type='range']::-webkit-slider-thumb {
     border: 1px solid black;
     width: 200px;
     height: 400px;
+}
+
+// .mute__img {
+//     opacity: 0;
+// }
+
+
+.circle__arrow {
+    // transform: ;
+}
+
+
+.volumeMute{
+    display: none;
 }
