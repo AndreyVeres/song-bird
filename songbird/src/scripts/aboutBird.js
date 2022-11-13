@@ -1,7 +1,7 @@
 import birdsData from "./birdsData";
 import { player2 } from "./player";
 import { vars ,lang} from "./variables";
-import playImg from '../img/play.svg';
+import playImg from '../img/pencil__play.svg';
 
 export function aboutBird() {
     removeAbout();

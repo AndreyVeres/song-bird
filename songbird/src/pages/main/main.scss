@@ -8,7 +8,9 @@
 .quiz {
     background-color: rgba(0, 0, 0, 0.226);
     padding: 30px 0;
-
+    left: 0;
+    right: 0;
+    position: absolute;
     &__box {
         display: flex;
         flex-direction: column;
