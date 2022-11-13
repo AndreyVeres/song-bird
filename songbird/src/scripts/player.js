@@ -19,16 +19,16 @@ export function player2(player) {
     let isPlaying = false;
 
     function setState() {
-        if(isPlaying) {
+        if (isPlaying) {
             audio.pause();
             this.src = playImg;
-        }else{
+        } else {
             audio.play();
             this.src = pauseImg;
         }
         isPlaying = !isPlaying;
 
-        
+
     };
 
     function updateTime(e) {
@@ -44,21 +44,31 @@ export function player2(player) {
         audio.currentTime = (click / width) * duration;
     };
 
-    function setVolume (e){
+    function setVolume(e) {
         let currentVolume = e.target.value;
-        audio.volume = currentVolume;        
+        audio.volume = currentVolume;
     };
 
-    function imageChange(){
-        if(audio.volume === 0){
-            console.log('asd')
-            volumeMute.style.display = 'block';
-            volumeFull.style.display = 'none'
+    function volumeImageChange() {
+        let volume = this.value;
+
+        if (volume === '0') {
+            volumeFull.style.display = 'none';
+            volumeMute.style.display = 'block'
+        } else {
+            volumeMute.style.display = 'none';
+            volumeFull.style.display = 'block';
+         
+            if (parseInt(volume.slice(2)) <= 5) {
+                document.querySelector('.volume__max').style.display = 'none'
+            } else {
+                document.querySelector('.volume__max').style.display = 'block'
+            }
         }
     }
-    volume.addEventListener('change' , imageChange)
+    volume.addEventListener('input', volumeImageChange)
 
-    volume.addEventListener('click' , setVolume);
+    volume.addEventListener('click', setVolume);
     timeProgressBar.addEventListener('click', setTime);
     control.addEventListener('click', setState);
     audio.addEventListener('timeupdate', updateTime);
