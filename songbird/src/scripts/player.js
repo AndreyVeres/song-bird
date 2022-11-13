@@ -12,7 +12,7 @@ export function player2(player) {
     const audio = _player.querySelector('.audio');
     const volume = _player.querySelector('.volume__range');
     // const muteImg = _player.querySelector('.mute__img');
-
+    const mainVolume = document.querySelector('.main__volume__range')
     const volumeFull = document.querySelector('.volumeFull')
     const volumeMute = document.querySelector('.volumeMute')
 
@@ -66,8 +66,7 @@ export function player2(player) {
             }
         }
     }
-    volume.addEventListener('input', volumeImageChange)
-
+    mainVolume.addEventListener('input', volumeImageChange)
     volume.addEventListener('click', setVolume);
     timeProgressBar.addEventListener('click', setTime);
     control.addEventListener('click', setState);
