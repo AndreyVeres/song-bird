@@ -4,7 +4,7 @@ import { elems, vars, sounds } from "./variables";
 export function correctAnswer() {
     vars.haveAnswer = true;
     this.classList.add('correct__answer');
-    let addScore = vars.totalPoints += vars.currPoints;
+    let addScore = vars.totalPoints += vars.currPoints >= 0 ? vars.currPoints : 0;
     vars.currPoints = 5;
     elems.score.textContent = 'Score' + ' : ' + addScore;
     elems.img.src = vars.currentBird.image;

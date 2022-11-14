@@ -1,7 +1,7 @@
 import correctSound from '../audio/correct.mp3';
 import wrongSound from '../audio/wrong.mp3';
+import { lang } from './language';
 
-export let lang = 'ru'
 
 export const elems = {
     img: document.querySelector('.quiz__player-img'),
@@ -13,6 +13,7 @@ export const elems = {
     question: document.querySelectorAll('.quiz__quest-item'),
     nextLevel: document.querySelector('.next__level'),
     answersItems: document.querySelectorAll('.quiz__quest-item-text'),
+    languageButton: document.querySelector('.language__change'),
     clearField: function () {
         this.answersItems.forEach(item => {
             item.classList.remove('correct__answer', 'wrong__answer');
@@ -39,7 +40,8 @@ export const sounds = {
 };
 []
 export const translationArr = {
-    'lng-mainPage': {
+    'lng-mainPage':
+    {
         'ru': 'Главная',
         'en': 'Main page'
     },
@@ -86,3 +88,7 @@ export const translationArr = {
     },
 
 }
+
+
+
+
