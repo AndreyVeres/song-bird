@@ -22,7 +22,7 @@ module.exports = {
         gallery: path.resolve(__dirname, 'src', 'pages', 'gallery', 'gallery.js'),
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist' , 'songbird'),
         clean: true,
         filename: '[name].bundle.js'
     },
@@ -67,7 +67,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.woff2?$/i,
+                test: /\.ttf$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'fonts/[name][ext]'
