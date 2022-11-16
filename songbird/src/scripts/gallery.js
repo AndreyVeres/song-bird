@@ -58,7 +58,8 @@ export function gallery() {
     function closePopup(e) {
         if(e.target === galleryPopup){
             galleryPopup.style.display ='none';
-            console.log(e.target)
+            galleryPopup.querySelector('.audio').load();
+            
         }
     }
     galleryPopup.addEventListener('click', closePopup)
