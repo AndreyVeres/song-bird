@@ -1,13 +1,8 @@
-
-
 body {
     color: black;
     font-size: 16px;
-
     font-family: 'Caveat', cursive;
     font-size: 20px;
-    // max-height: 100vh;
-    // overflow: hidden;
 }
 
 .container {
@@ -28,27 +23,39 @@ body {
         gap: 30px;
         padding: 0;
     }
-
 }
 
 img {
     max-height: 160px;
 
-    @media(max-width :600px){
+    @media(max-width :600px) {
         max-height: 120px;
     }
 
-    @media(max-width :400px){
+    @media(max-width :400px) {
         max-height: 90px;
     }
 }
 
-
 .main {
     overflow: hidden;
     position: relative;
-    /* background: red; */
     height: 100vh;
     width: 100vw;
-    
+}
+
+.github__img {
+    width: 40px;
+}
+
+.logo__img {
+    width: 100px;
+}
+
+button {
+    transition: all 1s;
+}
+
+button:not(:disabled):hover {
+    box-shadow: 1px 1px 30px 1px gray;
 }
