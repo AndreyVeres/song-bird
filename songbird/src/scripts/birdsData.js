@@ -301,7 +301,7 @@ const birdsData = [
       {
         id: 6,
         name: 'Филин',
-        namEn : 'Owl',
+        nameEn : 'Owl',
         species: 'Bubo bubo',
         description: 'Полет филина бесшумный, зрение очень острое. Эти особенности делают птицу непревзойденным ночным охотником. У филина нет естественных врагов, ни один зверь не охотится на взрослых птиц. А вот на птенцов нападают лисы и волки.',
         descriptionEn : 'The flight of the eagle owl is silent, the eyesight is very sharp. These features make the bird an unsurpassed night hunter. The eagle owl has no natural enemies, not a single animal preys on adult birds. But foxes and wolves attack the chicks.',

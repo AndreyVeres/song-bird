@@ -2,6 +2,7 @@ import birdsData from "./birdsData";
 import { player2 } from "./player";
 import { vars } from "./variables";
 import { lang } from '../scripts/language'
+// import { lang } from '../scripts/variables'
 import playImg from '../img/pencil__play.svg';
 
 export function aboutBird() {

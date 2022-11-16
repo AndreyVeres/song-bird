@@ -1,21 +1,53 @@
 import birdsData from '../../scripts/birdsData';
-import { elems, vars, translationArr } from '../../scripts/variables';
+import { elems, vars, translationArr, menu } from '../../scripts/variables';
 import { randomInteger, renderPlayer } from '../../scripts/helpers';
-import { correctAnswer, wrongAnswer } from '../../scripts/checkAnswers';
-import { setLanguage , translatePage } from '../../scripts/language';
+import { correctAnswer, resetGame, wrongAnswer } from '../../scripts/checkAnswers';
+import { language, setLanguage, translatePage } from '../../scripts/language';
 import './index.html';
 import './main.scss';
 import { player, player2 } from '../../scripts/player';
 import { aboutBird, removeAbout } from '../../scripts/aboutBird';
-import {lang} from '../../scripts/language';
-
-
-elems.languageButton.addEventListener('click' , translatePage)
-
-setLanguage()
+import { DefineLanguage } from '../../scripts/language';
+import { lang } from '../../scripts/language';
 import logo from '../../img/logo.svg'
+import { moveBlocks } from '../../scripts/moveBlocks';
+import { gallery } from '../../scripts/gallery';
+
+
+
+
+
+
+
+export const move = new moveBlocks('.main__menu', '.quiz', '.results', '.gallery');
+move.showMenu();
+
+
+
+menu.quiz.addEventListener('click', () => {
+    move.showQuiz();
+});
+
+menu.gallery.addEventListener('click', () => {
+    move.showGallery();
+})
+
+menu.playAgain.addEventListener('click', () => {
+    resetGame();
+    move.showQuiz();
+})
+
+menu.back.forEach(button => {
+    button.addEventListener('click', () => {
+
+        move.showMenu();
+    })
+})
+
+language();
 
 initQuestion(vars.questIndex);
+gallery();
 
 export function initQuestion(index) {
     vars.haveAnswer = false;
@@ -25,6 +57,9 @@ export function initQuestion(index) {
 
     removeAbout();
     elems.img.src = elems.plugSrc;
+
+
+
     elems.nextLevel.disabled = true;
     elems.name.textContent = '??????????';
     elems.voice.src = vars.currentBird.audio;
@@ -50,6 +85,6 @@ function verifyAnswer() {
 };
 
 
-// player();
+
 
 

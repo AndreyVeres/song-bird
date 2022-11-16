@@ -2,6 +2,18 @@ import pauseImg from '../img/pencil__pause.svg';
 import playImg from '../img/pencil__play.svg';
 import volumeFull from '../img/volumeFull.svg';
 import volumeMute from '../img/volumeMute.svg';
+// import { elems , vars} from './variables';
+// import notes0 from '../img/plug-0notes.png';
+// import notes1 from '../img/plug-1notes.png';
+// import notes2 from '../img/plug-2notes.png';
+// export const plugImages = [notes0, notes1, notes2, elems.plugSrc];
+
+
+
+
+
+
+// export let moveNotes;
 
 
 export function player2(player) {
@@ -11,25 +23,38 @@ export function player2(player) {
     const timeProgress = _player.querySelector('.progress');
     const audio = _player.querySelector('.audio');
     const volume = _player.querySelector('.volume__range');
-    // const muteImg = _player.querySelector('.mute__img');
+
     const mainVolume = document.querySelector('.main__volume__range')
     const volumeFull = document.querySelector('.volumeFull')
     const volumeMute = document.querySelector('.volumeMute')
 
     let isPlaying = false;
 
-    function setState() {
+    function setState(e) {
         if (isPlaying) {
             audio.pause();
+            // clearInterval(moveNotes)
             this.src = playImg;
         } else {
             audio.play();
+            // clearInterval(moveNotes)
+            // if(!vars.haveAnswer && e.target.classList.contains('main-control')){
+            //     let i = 0;
+            //     moveNotes = setInterval(() => {
+            //         if (i > plugImages.length - 1) {
+            //             i = 0;
+            //         }
+            //         elems.img.src = plugImages[i];
+            //         i++;
+            //     }, 300);
+            // }
+         
+        
             this.src = pauseImg;
         }
         isPlaying = !isPlaying;
-
-
     };
+
 
     function updateTime(e) {
         const { duration, currentTime } = e.srcElement;
@@ -58,7 +83,7 @@ export function player2(player) {
         } else {
             volumeMute.style.display = 'none';
             volumeFull.style.display = 'block';
-         
+
             if (parseInt(volume.slice(2)) <= 5) {
                 document.querySelector('.volume__max').style.display = 'none'
             } else {
