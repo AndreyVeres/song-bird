@@ -7,8 +7,6 @@ import { moveNotes } from "./player";
 export function correctAnswer() {
     // clearInterval(moveNotes);
     vars.haveAnswer = true;
-    
-   
     this.classList.add('correct__answer');
     let addScore = vars.totalPoints += vars.currPoints >= 0 ? vars.currPoints : 0;
     vars.currPoints = 5;
@@ -16,7 +14,8 @@ export function correctAnswer() {
     elems.img.src = vars.currentBird.image;
     elems.name.textContent = lang === 'ru'  ? vars.currentBird.name : vars.currentBird.nameEn
     vars.questIndex++;
-    sounds.correct.play()
+    sounds.correct.play();
+    document.querySelector('.audio').load();
     setTimeout(() => {
         sounds.correct.load()
     }, 600);

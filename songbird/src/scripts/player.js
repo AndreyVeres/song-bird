@@ -33,23 +33,10 @@ export function player2(player) {
     function setState(e) {
         if (isPlaying) {
             audio.pause();
-            // clearInterval(moveNotes)
             this.src = playImg;
         } else {
             audio.play();
-            // clearInterval(moveNotes)
-            // if(!vars.haveAnswer && e.target.classList.contains('main-control')){
-            //     let i = 0;
-            //     moveNotes = setInterval(() => {
-            //         if (i > plugImages.length - 1) {
-            //             i = 0;
-            //         }
-            //         elems.img.src = plugImages[i];
-            //         i++;
-            //     }, 300);
-            // }
-         
-        
+
             this.src = pauseImg;
         }
         isPlaying = !isPlaying;
